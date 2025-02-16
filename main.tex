@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, framed}  
+\usepackage{amsthm}            
+\usepackage{graphicx}          
+\usepackage{hyperref}          
+\usepackage{enumitem}     
+\usepackage{braket}
+\usepackage[margin=1in]{geometry}  
+
+
+
+\title{Chapter 2}
+\author{Vasilii Nikonov}
+\date{February 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{framed} % Creates a visually separated block
+    \noindent \textbf{Exercise 2.1: (Linear Dependence Example)}
+    
+    \medskip
+    We can observe that:
+    $$
+    (1, -1) + (1, 2) - (2, 1) = (0,0) = \boldsymbol{0}
+    $$
+    Thus, the set of three provided vectors is linearly dependent.
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.2: (Matrix Representations: Example)}
+
+    \medskip
+    $V$ is a vector space with basis $\{ \ket{0}, \ket{1} \}$. \\
+    $$
+        A\ket{0} = \ket{1} \implies A\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \implies \text{ first column of A is } 
+        \ket{1}
+    $$
+    as multiplication of a 2 by 2 matrix by  $\ket{0}$ is just extracting the first column. Also
+    $$
+        A\ket{1} = \ket{0} \implies A\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \implies \text{ second column of A is } \ket{0}
+    $$
+    Thus $A = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$. \\ \\ 
+    We know, from (2.7), that $\ket{v_1} = \ket{+} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}$ and $\ket{v_2} = \ket{-} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} \end{bmatrix}$ span the $\mathbb{C}^{2}$, they also form a basis for $\mathbb{C}^2$, as they are linearly independent (the only solution for $c_1\ket{+} + c_2\ket{-} = 0$ is trivial). \\ \\ 
+    So we can form following linear operators $A_i$ from $\mathbb{C}^{2}$ to $\mathbb{C}^{2}$ :
+    \begin{enumerate}
+        \item $A_1\ket{0} = \ket{+}$ and $A_1\ket{1} = \ket{-}$
+        \item $A_2\ket{0} = \ket{-}$ and $A_2\ket{1} = \ket{+}$
+        \item $A_3\ket{+} = \ket{0}$ and $A_3\ket{-} = \ket{1}$
+        \item $A_4\ket{+} = \ket{1}$ and $A_4\ket{-} = \ket{0}$
+    \end{enumerate}
+    We can compute $A_2 = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, where $ \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} \end{bmatrix}$ and $ \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}$. We can trivially see, that $A_2 = \begin{bmatrix} \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \end{bmatrix}$ \\ \\ 
+    A case $A_3 = \begin{bmatrix} e & f \\ g & h \end{bmatrix}$ is a bit more interesting, because we cannot just extract the columns. We can write in matrix form.
+    $$
+    \begin{bmatrix} e & f \\ g & h \end{bmatrix} \begin{bmatrix} \frac{1}{\sqrt{2}} && \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} && \frac{-1}{\sqrt{2}} \end{bmatrix} = I
+    $$
+    We can multiply both sides on the right by a transpose of the second matrix, as it is orthogonal.
+    $$
+    A_3 = \begin{bmatrix} e & f \\ g & h \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} && \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} && \frac{-1}{\sqrt{2}} \end{bmatrix}
+    $$
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.3: (Matrix representation for operator products)}
+
+    \medskip
+    We have the following combination of linear operators and vector spaces $V \xrightarrow{A} W \xrightarrow{B} X$. From (2.12) we can write: 
+    \begin{equation}
+        A\ket{v_i} = \sum_{j}{A_{ji}\ket{w_j}}\text{, and } B\ket{w_j} = \sum_{k}{B_{kj}\ket{x_k}} 
+        \tag{1}
+    \end{equation}
+    $$BA\ket{v_j} = B(\sum_{j}{A_{ji}\ket{v_j}}) \text{ from (1)}$$
+    $$
+    B(\sum_{j}{A_{ji}\ket{v_j}}) = \sum_{j}{A_{ji}B(\ket{v_j}}) \text{ from linearity of inputs in (2.10)}
+    $$
+    $$
+     = \sum_{j}{A_{ji}\sum_{k}{B_{kj}\ket{x_k}}} \text{ from (1)}
+    $$
+    \begin{equation}
+    = \sum_k(\sum_j{B_{kj}A_{ji}) \ket{x_k}} \text{ rearranging the sum order}
+    \tag{2}
+    \end{equation}
+    If we look from the point of view of a linear operation from V to X, then we need to have some matrix $C$, that would give us:
+    $$C\ket{v_i} = \sum_k{C_{ki}\ket{x_k}}$$
+    It is precisely 
+    $$
+    BA_{ki} = \sum_j{B_{kj}A_{ji}} \text{ from (2)}
+    $$
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.4: (Matrix representation for identity)}
+
+    \medskip
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.5}
+
+    \medskip
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.6}
+
+    \medskip
+    
+\end{framed}
+
+\end{document}
