@@ -91,6 +91,7 @@
     $$
     BA_{ki} = \sum_j{B_{kj}A_{ji}} \text{ from (2)}
     $$
+    \qed
 \end{framed}
 
 \bigskip
@@ -108,16 +109,66 @@
     \noindent \textbf{Exercise 2.5}
 
     \medskip
-    
 \end{framed}
 
 \bigskip
 
 \begin{framed}
     \noindent \textbf{Exercise 2.6}
-
+    
     \medskip
     
+    Here we need to show, that any inner product $(\cdot, \cdot)$ is conjugate-linear in the first argument.
+    $$
+    (\sum_{i}{\lambda_i \ket{w_i}}, \ket{v}) = (\ket{v}, \sum_{i}{\lambda_i \ket{w_i}})^{*} \text{ from (2.13 (2))}
+    $$
+    $$
+    = (\sum_{i}{\lambda_i(\ket{v}, \ket{w_i})})^{*} \text{ from linearity of second inner-product argument (2.13 (1))}
+    $$
+    $$
+    = \sum_{i}{(\lambda_i(\ket{v}, \ket{w_i}))^*} \text{ as conjugate of a sum is a sum of conjugates}
+    $$
+    $$
+    = \sum_{i}{\lambda_i^*(\ket{v}, \ket{w_i})^*}  \text{ as conjugate of a product is a product of conjugates}
+    $$
+    $$
+    = \sum_{i}{\lambda_i^*(\ket{w_i}, \ket{v})} \text{ from (2.13 (2))}
+    $$
+    \qed
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 2.45}
+    
+    \medskip
+    
+    Consider Hermitian conjugate of a commutator between two operators A and B 
+    $$
+    [A,B]^{\dagger} = (AB - BA)^{\dagger} \text{ from (2.66)}
+    $$
+    $$
+    = ((AB - BA)^{T})^{*} \text{ from definition of Hermitian conjugate}
+    $$
+    $$
+    = ((AB)^{T} - (BA)^{T}) ^ {*} = B^TA^T - A^TB^T)^* = (B^T)^*(A^T)^* - (A^T)^*(B^T)^*
+    $$
+    $$
+    = B^{\dagger}A^{\dagger} - A^{\dagger}B^{\dagger} = [B^{\dagger},A^{\dagger}]
+    $$
+    \qed
+\end{framed}
+
+\bigskip
+\begin{framed}
+\noindent \textbf{Exercise 2.46}
+
+\medskip
+
+Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
+\qed
 \end{framed}
 
 \end{document}

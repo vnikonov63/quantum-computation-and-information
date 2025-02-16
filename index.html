@@ -269,7 +269,7 @@ operation from V to X, then we need to have some matrix <span
 class="math inline">\(C\)</span>, that would give us: <span
 class="math display">\[C\ket{v_i} = \sum_k{C_{ki}\ket{x_k}}\]</span> It
 is precisely <span class="math display">\[BA_{ki} = \sum_j{B_{kj}A_{ji}}
-\text{ from (2)}\]</span></p>
+\text{ from (2)}\]</span> 0◻</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.4: (Matrix representation for
@@ -280,6 +280,36 @@ identity)</strong></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.6</strong></p>
+<p>Here we need to show, that any inner product <span
+class="math inline">\((\cdot, \cdot)\)</span> is conjugate-linear in the
+first argument. <span class="math display">\[(\sum_{i}{\lambda_i
+\ket{w_i}}, \ket{v}) = (\ket{v}, \sum_{i}{\lambda_i \ket{w_i}})^{*}
+\text{ from (2.13 (2))}\]</span> <span class="math display">\[=
+(\sum_{i}{\lambda_i(\ket{v}, \ket{w_i})})^{*} \text{ from linearity of
+second inner-product argument (2.13 (1))}\]</span> <span
+class="math display">\[= \sum_{i}{(\lambda_i(\ket{v}, \ket{w_i}))^*}
+\text{ as conjugate of a sum is a sum of conjugates}\]</span> <span
+class="math display">\[= \sum_{i}{\lambda_i^*(\ket{v},
+\ket{w_i})^*}  \text{ as conjugate of a product is a product of
+conjugates}\]</span> <span class="math display">\[=
+\sum_{i}{\lambda_i^*(\ket{w_i}, \ket{v})} \text{ from (2.13
+(2))}\]</span> 0◻</p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.45</strong></p>
+<p>Consider Hermitian conjugate of a commutator between two operators A
+and B <span class="math display">\[[A,B]^{\dagger} = (AB - BA)^{\dagger}
+\text{ from (2.66)}\]</span> <span class="math display">\[= ((AB -
+BA)^{T})^{*} \text{ from definition of Hermitian conjugate}\]</span>
+<span class="math display">\[= ((AB)^{T} - (BA)^{T}) ^ {*} = B^TA^T -
+A^TB^T)^* = (B^T)^*(A^T)^* - (A^T)^*(B^T)^*\]</span> <span
+class="math display">\[= B^{\dagger}A^{\dagger} - A^{\dagger}B^{\dagger}
+= [B^{\dagger},A^{\dagger}]\]</span> 0◻</p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.46</strong></p>
+<p>Consider <span class="math inline">\([A, B] = AB - BA = -(-AB + BA) =
+- (BA - AB) = -[B, A]\)</span> 0◻</p>
 </div>
 </body>
 </html>
