@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Vasilii Nikonov" />
+  <title>Chapter 2</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chapter 2</h1>
+<p class="author">Vasilii Nikonov</p>
+<p class="date">February 2025</p>
+</header>
+<div class="framed">
+<p><strong>Exercise 2.1: (Linear Dependence Example)</strong></p>
+<p>We can observe that: <span class="math display">\[(1, -1) + (1, 2) -
+(2, 1) = (0,0) = \boldsymbol{0}\]</span> Thus, the set of three provided
+vectors is linearly dependent.</p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.2: (Matrix Representations: Example)</strong></p>
+<p><span class="math inline">\(V\)</span> is a vector space with basis
+<span class="math inline">\(\{ \ket{0}, \ket{1} \}\)</span>.<br />
+<span class="math display">\[A\ket{0} = \ket{1} \implies
+A\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 1
+\end{bmatrix} \implies \text{ first column of A is }
+        \ket{1}\]</span> as multiplication of a 2 by 2 matrix by <span
+class="math inline">\(\ket{0}\)</span> is just extracting the first
+column. Also <span class="math display">\[A\ket{1} = \ket{0} \implies
+A\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0
+\end{bmatrix} \implies \text{ second column of A is } \ket{0}\]</span>
+Thus <span class="math inline">\(A = \begin{bmatrix} 0 &amp; 1 \\ 1
+&amp; 0 \end{bmatrix}\)</span>.<br />
+<br />
+We know, from (2.7), that <span class="math inline">\(\ket{v_1} =
+\ket{+} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}\)</span> and <span class="math inline">\(\ket{v_2} =
+\ket{-} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{bmatrix}\)</span> span the <span
+class="math inline">\(\mathbb{C}^{2}\)</span>, they also form a basis
+for <span class="math inline">\(\mathbb{C}^2\)</span>, as they are
+linearly independent (the only solution for <span
+class="math inline">\(c_1\ket{+} + c_2\ket{-} = 0\)</span> is
+trivial).<br />
+<br />
+So we can form following linear operators <span
+class="math inline">\(A_i\)</span> from <span
+class="math inline">\(\mathbb{C}^{2}\)</span> to <span
+class="math inline">\(\mathbb{C}^{2}\)</span> :</p>
+<ol>
+<li><p><span class="math inline">\(A_1\ket{0} = \ket{+}\)</span> and
+<span class="math inline">\(A_1\ket{1} = \ket{-}\)</span></p></li>
+<li><p><span class="math inline">\(A_2\ket{0} = \ket{-}\)</span> and
+<span class="math inline">\(A_2\ket{1} = \ket{+}\)</span></p></li>
+<li><p><span class="math inline">\(A_3\ket{+} = \ket{0}\)</span> and
+<span class="math inline">\(A_3\ket{-} = \ket{1}\)</span></p></li>
+<li><p><span class="math inline">\(A_4\ket{+} = \ket{1}\)</span> and
+<span class="math inline">\(A_4\ket{-} = \ket{0}\)</span></p></li>
+</ol>
+<p>We can compute <span class="math inline">\(A_2 = \begin{bmatrix} a
+&amp; b \\ c &amp; d \end{bmatrix}\)</span>, where <span
+class="math inline">\(\begin{bmatrix} a &amp; b \\ c &amp; d
+\end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} \end{bmatrix}\)</span> and
+<span class="math inline">\(\begin{bmatrix} a &amp; b \\ c &amp; d
+\end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}\)</span>. We can
+trivially see, that <span class="math inline">\(A_2 = \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} &amp;
+\frac{1}{\sqrt{2}} \end{bmatrix}\)</span><br />
+<br />
+A case <span class="math inline">\(A_3 = \begin{bmatrix} e &amp; f \\ g
+&amp; h \end{bmatrix}\)</span> is a bit more interesting, because we
+cannot just extract the columns. We can write in matrix form. <span
+class="math display">\[\begin{bmatrix} e &amp; f \\ g &amp; h
+\end{bmatrix} \begin{bmatrix} \frac{1}{\sqrt{2}} &amp;&amp;
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp;&amp; \frac{-1}{\sqrt{2}}
+\end{bmatrix} = I\]</span> We can multiply both sides on the right by a
+transpose of the second matrix, as it is orthogonal. <span
+class="math display">\[A_3 = \begin{bmatrix} e &amp; f \\ g &amp; h
+\end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} &amp;&amp;
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp;&amp; \frac{-1}{\sqrt{2}}
+\end{bmatrix}\]</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.3: (Matrix representation for operator
+products)</strong></p>
+<p>We have the following combination of linear operators and vector
+spaces <span class="math inline">\(V \xrightarrow{A} W \xrightarrow{B}
+X\)</span>. From (2.12) we can write: <span
+class="math display">\[A\ket{v_i} = \sum_{j}{A_{ji}\ket{w_j}}\text{, and
+} B\ket{w_j} = \sum_{k}{B_{kj}\ket{x_k}}
+        \tag{1}\]</span> <span class="math display">\[BA\ket{v_j} =
+B(\sum_{j}{A_{ji}\ket{v_j}}) \text{ from (1)}\]</span> <span
+class="math display">\[B(\sum_{j}{A_{ji}\ket{v_j}}) =
+\sum_{j}{A_{ji}B(\ket{v_j}}) \text{ from linearity of inputs in
+(2.10)}\]</span> <span class="math display">\[=
+\sum_{j}{A_{ji}\sum_{k}{B_{kj}\ket{x_k}}} \text{ from (1)}\]</span>
+<span class="math display">\[= \sum_k(\sum_j{B_{kj}A_{ji}) \ket{x_k}}
+\text{ rearranging the sum order}
+    \tag{2}\]</span> If we look from the point of view of a linear
+operation from V to X, then we need to have some matrix <span
+class="math inline">\(C\)</span>, that would give us: <span
+class="math display">\[C\ket{v_i} = \sum_k{C_{ki}\ket{x_k}}\]</span> It
+is precisely <span class="math display">\[BA_{ki} = \sum_j{B_{kj}A_{ji}}
+\text{ from (2)}\]</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.4: (Matrix representation for
+identity)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.5</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.6</strong></p>
+</div>
+</body>
+</html>
