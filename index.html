@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Vasilii Nikonov" />
-  <title>Chapter 2</title>
+  <title>Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang</title>
   <style>
     html {
       color: #1a1a1a;
@@ -173,10 +173,14 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Chapter 2</h1>
+<h1 class="title">Quantum Computation and Quantum Information by Michael
+A. Nielsen and Isaac L. Chuang</h1>
 <p class="author">Vasilii Nikonov</p>
 <p class="date">February 2025</p>
 </header>
+<h2 class="unnumbered"
+id="chapter-2-introduction-to-quantum-mechanics">Chapter 2: Introduction
+to quantum mechanics</h2>
 <div class="framed">
 <p><strong>Exercise 2.1: (Linear Dependence Example)</strong></p>
 <p>We can observe that: <span class="math display">\[(1, -1) + (1, 2) -
@@ -311,6 +315,48 @@ product)</strong></p>
 <div class="framed">
 <p><strong>Exercise 2.11: (Eigendecomposition of the Pauli
 matrices)</strong></p>
+<ol>
+<li><p>X = <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \\ 1
+&amp; 0 \end{bmatrix} \implies\)</span>characteristic equation is <span
+class="math inline">\(det(\begin{bmatrix} - \lambda &amp; 1 \\ 1 &amp;
+-\lambda \end{bmatrix}) = \lambda^2 - 1\)</span> and the solution is
+<span class="math inline">\(\lambda = \pm1\)</span>.</p>
+<ol>
+<li><p><span class="math inline">\(\lambda = 1\)</span>, Solving <span
+class="math inline">\(X\ket{v} = \ket{v} \implies \begin{bmatrix} 0
+&amp; 1 \\ 1 &amp; 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2
+\end{bmatrix}=\begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \implies
+\begin{bmatrix} v_2 \\ v_1 \end{bmatrix}=\begin{bmatrix} v_1 \\ v_2
+\end{bmatrix}\)</span>. Thus the eigenvector is any scalar multiple of
+<span class="math inline">\(\begin{bmatrix} 1 \\ 1
+\end{bmatrix}\)</span><br />
+</p></li>
+<li><p><span class="math inline">\(\lambda = -1\)</span>, Solving <span
+class="math inline">\(X\ket{v} = -\ket{v} \implies \begin{bmatrix} 0
+&amp; 1 \\ 1 &amp; 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2
+\end{bmatrix}=\begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies
+\begin{bmatrix} v_2 \\ v_1 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2
+\end{bmatrix}\)</span> Thus the eigenvector is any scalar multiple of
+<span class="math inline">\(\begin{bmatrix} 1 \\ -1
+\end{bmatrix}\)</span></p></li>
+</ol></li>
+<li><p>Y = <span class="math inline">\(\begin{bmatrix} 0 &amp; -i \\ i
+&amp; 0 \end{bmatrix} \implies\)</span>characteristic equation is <span
+class="math inline">\(det(\begin{bmatrix} - \lambda &amp; -i \\ i &amp;
+-\lambda \end{bmatrix}) = \lambda^2 + 1\)</span> and the solution is
+<span class="math inline">\(\lambda = \pm i\)</span></p>
+<ol>
+<li></li>
+</ol></li>
+<li><p>Z = <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0
+&amp; -1 \end{bmatrix} \implies\)</span>characteristic equation is <span
+class="math inline">\(det(\begin{bmatrix} - \lambda &amp; 1 \\ 1 &amp;
+-\lambda \end{bmatrix}) = \lambda^2 - 1\)</span> and the solution is
+<span class="math inline">\(\lambda = \pm1\)</span></p>
+<ol>
+<li></li>
+</ol></li>
+</ol>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.12</strong></p>
@@ -407,7 +453,47 @@ operators)</strong></p>
 <p><strong>Exercise 2.25</strong></p>
 </div>
 <div class="framed">
-<p><strong>Exercise 2.26</strong></p>
+<p><strong>Exercise 2.26</strong> <span
+class="math display">\[\ket{\psi}^{\otimes2} = \ket{\psi} \otimes
+\ket{\psi} \text{, analogously } \ket{\psi}^{\otimes3} = \ket{\psi}
+\otimes \ket{\psi} \otimes \ket{\psi}\]</span> Explicitly: <span
+class="math display">\[\ket{\psi}^{\otimes2} =
+(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes
+(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) = \frac{1}{2}((\ket{0} +
+\ket{1}) \otimes (\ket{0} + \ket{1})) \text{ from (2.42) }\]</span>
+<span class="math display">\[= \frac{1}{2}(\ket{0} \otimes \ket{0} +
+\ket{1} \otimes \ket{0} + \ket{0} \otimes \ket{1} + \ket{1} \otimes
+\ket{1}) \text{ from distributive properties (2.43. 2.44)}\]</span>
+Using Kronecker product: <span class="math display">\[\ket{0} =
+\begin{bmatrix}1 \\ 0\end{bmatrix}, \ket{1} = \begin{bmatrix}0 \\
+1\end{bmatrix}, so \ket{\psi}^{\otimes2} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix} \otimes
+\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix} =
+\begin{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}\end{bmatrix} \\
+\frac{1}{\sqrt{2}}\begin{bmatrix}\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}\end{bmatrix}\end{bmatrix} =
+\frac{1}{2}\begin{bmatrix}1 \\ 1\\ 1\\ 1\end{bmatrix}\]</span>
+Explicitly: <span class="math display">\[\ket{\psi}^{\otimes3} =
+(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes
+(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes
+(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) = \frac{1}{2\sqrt{2}}((\ket{0} +
+\ket{1}) \otimes (\ket{0} + \ket{1})) \otimes (\ket{0} +
+\ket{1}))\]</span> <span class="math display">\[=
+\frac{1}{2\sqrt{2}}(\ket{0} \otimes \ket{0} \otimes \ket{0} + \ket{0}
+\otimes \ket{0} \otimes \ket{1} + \ket{0} \otimes \ket{1} \otimes
+\ket{0} + \ket{0} \otimes \ket{1} \otimes \ket{1} + \ket{1} \otimes
+\ket{0} \otimes \ket{0} + \ket{1} \otimes \ket{0} \otimes \ket{1}
++\]</span> <span class="math display">\[+ \ket{1} \otimes \ket{1}
+\otimes \ket{0} + \ket{1} \otimes \ket{1} \otimes \ket{1})\]</span>
+Using Kronecker product: <span
+class="math display">\[\ket{\psi}^{\otimes3} = \ket{\psi}^{\otimes2}
+\otimes \ket{\psi} = (\frac{1}{2}\begin{bmatrix}1 \\ 1\\ 1\\
+1\end{bmatrix}) \otimes \begin{bmatrix}
+\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{bmatrix} =
+\frac{1}{2\sqrt{2}}\begin{bmatrix}1 \\ 1\\ 1\\ 1\end{bmatrix} \otimes
+\begin{bmatrix}1 \\1 \end{bmatrix} = \frac{1}{2\sqrt{2}}\begin{bmatrix}1
+\\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\end{bmatrix}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.27</strong></p>
@@ -624,5 +710,31 @@ number)</strong></p>
 <p><strong>End of Chapter Exercise 2.3: (Tsirelson’s
 inequality)</strong></p>
 </div>
+<h2 class="unnumbered"
+id="chapter-3-introduction-to-computer-science">Chapter 3: Introduction
+to computer science</h2>
+<h2 class="unnumbered" id="chapter-4-quantum-circuits">Chapter 4:
+Quantum circuits</h2>
+<h2 class="unnumbered"
+id="chapter-5-the-quantum-fourier-transform-and-its-applications">Chapter
+5: The quantum Fourier transform and its applications</h2>
+<h2 class="unnumbered" id="chapter-6-quantum-search-algorithms">Chapter
+6: Quantum search algorithms</h2>
+<h2 class="unnumbered"
+id="chapter-7-quantum-computers-physical-realization">Chapter 7: Quantum
+computers: physical realization</h2>
+<h2 class="unnumbered"
+id="chapter-8-quantum-noise-and-quantum-operations">Chapter 8: Quantum
+noise and quantum operations</h2>
+<h2 class="unnumbered"
+id="chapter-9-distance-measures-for-quantum-information">Chapter 9:
+Distance measures for quantum information </h2>
+<h2 class="unnumbered" id="chapter-10-quantum-error-correction">Chapter
+10: Quantum error-correction</h2>
+<h2 class="unnumbered" id="chapter-11-entropy-and-information">Chapter
+11: Entropy and information</h2>
+<h2 class="unnumbered"
+id="chapter-12-quantum-information-theory">Chapter 12: Quantum
+information theory </h2>
 </body>
 </html>

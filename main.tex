@@ -9,13 +9,15 @@
 
 
 
-\title{Chapter 2}
+\title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang}
 \author{Vasilii Nikonov}
 \date{February 2025}
 
 \begin{document}
 
 \maketitle
+
+\subsection*{Chapter 2: Introduction to quantum mechanics}
 
 \begin{framed} % Creates a visually separated block
     \noindent \textbf{Exercise 2.1: (Linear Dependence Example)}
@@ -182,6 +184,21 @@
     \noindent \textbf{Exercise 2.11: (Eigendecomposition of the Pauli matrices)}
     
     \medskip
+    \begin{enumerate}
+        \item X = $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & 1 \\ 1 & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm1$.
+        \begin{enumerate}
+            \item $\lambda = 1$, Solving $X\ket{v} = \ket{v} \implies \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}=\begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \implies \begin{bmatrix} v_2 \\ v_1 \end{bmatrix}=\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}$. Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$\\
+            \item $\lambda = -1$, Solving $X\ket{v} = -\ket{v} \implies \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}=\begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies \begin{bmatrix} v_2 \\ v_1 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix}$ Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+        \end{enumerate}
+        \item Y = $\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & -i \\ i & -\lambda \end{bmatrix}) = \lambda^2 + 1$ and the solution is $\lambda = \pm i$
+        \begin{enumerate}
+            \item 
+        \end{enumerate}
+        \item Z = $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & 1 \\ 1 & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm1$
+        \begin{enumerate}
+            \item 
+        \end{enumerate}
+    \end{enumerate}
     
     
 \end{framed}
@@ -350,7 +367,32 @@
 
 \begin{framed}
     \noindent \textbf{Exercise 2.26}
-    
+    $$\ket{\psi}^{\otimes2} = \ket{\psi} \otimes \ket{\psi} \text{, analogously } \ket{\psi}^{\otimes3} = \ket{\psi} \otimes \ket{\psi} \otimes \ket{\psi}$$
+    Explicitly: 
+    $$
+    \ket{\psi}^{\otimes2} = (\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes (\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) = \frac{1}{2}((\ket{0} + \ket{1}) \otimes (\ket{0} + \ket{1})) \text{ from (2.42) }
+    $$
+    $$
+    = \frac{1}{2}(\ket{0} \otimes \ket{0} + \ket{1} \otimes \ket{0} + \ket{0} \otimes \ket{1} + \ket{1} \otimes \ket{1}) \text{ from distributive properties (2.43. 2.44)}
+    $$
+    Using Kronecker product:
+    $$
+     \ket{0} = \begin{bmatrix}1 \\ 0\end{bmatrix}, \ket{1} = \begin{bmatrix}0 \\ 1\end{bmatrix}, so \ket{\psi}^{\otimes2} = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix} \otimes \begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix} = \begin{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix} \\ \frac{1}{\sqrt{2}}\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix}\end{bmatrix} = \frac{1}{2}\begin{bmatrix}1 \\ 1\\ 1\\ 1\end{bmatrix}
+    $$
+    Explicitly: 
+    $$
+    \ket{\psi}^{\otimes3} = (\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes (\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) \otimes (\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})) = \frac{1}{2\sqrt{2}}((\ket{0} + \ket{1}) \otimes (\ket{0} + \ket{1})) \otimes (\ket{0} + \ket{1}))
+    $$
+    $$
+    = \frac{1}{2\sqrt{2}}(\ket{0} \otimes \ket{0} \otimes \ket{0} + \ket{0} \otimes \ket{0} \otimes \ket{1} + \ket{0} \otimes \ket{1} \otimes \ket{0} + \ket{0} \otimes \ket{1} \otimes \ket{1} + \ket{1} \otimes \ket{0} \otimes \ket{0} + \ket{1} \otimes \ket{0} \otimes \ket{1} + 
+    $$
+    $$
+    + \ket{1} \otimes \ket{1} \otimes \ket{0} + \ket{1} \otimes \ket{1} \otimes \ket{1})
+    $$
+    Using Kronecker product:
+    $$
+    \ket{\psi}^{\otimes3} = \ket{\psi}^{\otimes2} \otimes \ket{\psi} = (\frac{1}{2}\begin{bmatrix}1 \\ 1\\ 1\\ 1\end{bmatrix}) \otimes \begin{bmatrix} \frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{bmatrix} = \frac{1}{2\sqrt{2}}\begin{bmatrix}1 \\ 1\\ 1\\ 1\end{bmatrix} \otimes \begin{bmatrix}1 \\1 \end{bmatrix} = \frac{1}{2\sqrt{2}}\begin{bmatrix}1 \\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\\ 1\end{bmatrix}
+    $$
     \medskip
     
     
@@ -981,5 +1023,16 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     
     
 \end{framed}
+
+\subsection*{Chapter 3: Introduction to computer science}
+\subsection*{Chapter 4: Quantum circuits}
+\subsection*{Chapter 5: The quantum Fourier transform and its applications}
+\subsection*{Chapter 6: Quantum search algorithms}
+\subsection*{Chapter 7: Quantum computers: physical realization}
+\subsection*{Chapter 8: Quantum noise and quantum operations}
+\subsection*{Chapter 9: Distance measures for quantum information }
+\subsection*{Chapter 10: Quantum error-correction}
+\subsection*{Chapter 11: Entropy and information}
+\subsection*{Chapter 12: Quantum information theory }
 
 \end{document}
