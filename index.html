@@ -269,7 +269,7 @@ operation from V to X, then we need to have some matrix <span
 class="math inline">\(C\)</span>, that would give us: <span
 class="math display">\[C\ket{v_i} = \sum_k{C_{ki}\ket{x_k}}\]</span> It
 is precisely <span class="math display">\[BA_{ki} = \sum_j{B_{kj}A_{ji}}
-\text{ from (2)}\]</span> 0◻</p>
+\text{ from (2)}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.4: (Matrix representation for
@@ -293,7 +293,189 @@ class="math display">\[= \sum_{i}{\lambda_i^*(\ket{v},
 \ket{w_i})^*}  \text{ as conjugate of a product is a product of
 conjugates}\]</span> <span class="math display">\[=
 \sum_{i}{\lambda_i^*(\ket{w_i}, \ket{v})} \text{ from (2.13
-(2))}\]</span> 0◻</p>
+(2))}\]</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.7</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.8</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.9: (Pauli operators and the outer
+product)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.10</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.11: (Eigendecomposition of the Pauli
+matrices)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.12</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.13</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.14: (Anti-linearity of the adjoint)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.15</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.16</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.17</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.18</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.19: (Pauli matrices: Hermitian and
+unitary)</strong></p>
+<p>Matrix A is Hermitian if <span class="math inline">\(A^{\dagger} =
+A\)</span>, matrix B is unitary if <span
+class="math inline">\(B^{\dagger}B = BB^{\dagger} = I\)</span><br />
+<br />
+Now let’s consider each of the Pauli matrices</p>
+<ol>
+<li><p><span class="math inline">\(\sigma_0 = I = \begin{bmatrix} 1
+&amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span><br />
+<br />
+<span class="math inline">\(I^{\dagger} = (I^{T})^{*} = I\)</span> as
+identity is symmetric, and complex conjugate of a real value is just
+itself, thus I is Hermitian.<br />
+<br />
+<span class="math inline">\(I^{\dagger}I = II = I = II^{\dagger}
+\implies I\)</span> is unitary</p></li>
+<li><p><span class="math inline">\(\sigma_1=\sigma_x=X = \begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span><br />
+<br />
+<span class="math inline">\(X^{\dagger} = (X^{T})^* = \begin{bmatrix} 0
+&amp; 1 \\ 1 &amp; 0 \end{bmatrix}^{*} = X \implies X\)</span> is
+Hermitian<br />
+<br />
+<span class="math inline">\(X^{\dagger}X = XX = XX^{\dagger} =
+\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 0
+&amp; 1 \\ 1 &amp; 0 \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 \\ 0
+&amp; 1 \end{bmatrix} = I \implies X\)</span> is unitary</p></li>
+<li><p><span class="math inline">\(\sigma_2=\sigma_y=Y = \begin{bmatrix}
+0 &amp; -i \\ i &amp; 0 \end{bmatrix}\)</span><br />
+<br />
+<span class="math inline">\(Y^{\dagger} = (Y^{T})^* = \begin{bmatrix} 0
+&amp; i \\ -i &amp; 0 \end{bmatrix}^{*} = \begin{bmatrix} 0 &amp; -i \\
+i &amp; 0 \end{bmatrix} = Y \implies Y\)</span> is Hermitian<br />
+<br />
+<span class="math inline">\(Y^{\dagger}Y = YY = YY^{\dagger} =
+\begin{bmatrix} 0 &amp; -i \\ i &amp; 0 \end{bmatrix}\begin{bmatrix} 0
+&amp; -i \\ i &amp; 0 \end{bmatrix}=\begin{bmatrix} -i^2 &amp; 0 \\ 0
+&amp; -i^2 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1
+\end{bmatrix} = I \implies Y\)</span> is unitary</p></li>
+<li><p><span class="math inline">\(\sigma_3=\sigma_z=Z = \begin{bmatrix}
+1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span><br />
+<br />
+<span class="math inline">\(Z^{\dagger} = (Z^{T})^{*} = \begin{bmatrix}
+1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}^{*} = Z \implies Z\)</span> is
+Hermitian<br />
+<br />
+<span class="math inline">\(Z^{\dagger}Z = ZZ = ZZ^{\dagger} =
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\begin{bmatrix} 1
+&amp; 0 \\ 0 &amp; -1 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \\ 0 &amp;
+(-1)^2 \end{bmatrix}=I \implies Z\)</span> is unitary</p></li>
+</ol>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.20: (Basis changes)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.21</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.22</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.23</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.24: (Hermiticity of positive
+operators)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.25</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.26</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.27</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.28</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.29</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.30</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.31</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.32</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.33</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.34</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.35: (Exponential of the Pauli
+matrices)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.36</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.37: (Cyclic property of the trace)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.38: (Linearity of the trace)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.39: (The Hilbert–Schmidt inner product on
+operators)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.40: (Commutation relations for the Pauli
+matrices)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.41: (Anti-commutation relations for the Pauli
+matrices)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.42</strong></p>
+<p><span class="math display">\[\text{Consider }  \frac{[A,B]
++\{A,B\}}{2} = \frac{AB - BA + AB + BA}{2} \text{ from (2.66),
+(2.67)}\]</span> <span class="math display">\[= \frac{2AB}{2} =
+AB\]</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.43</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.44</strong> <span class="math display">\[[A,B] = 0
+\implies AB - BA = 0, \{A, B\} = 0 \implies AB + BA = 0 \text{ from
+definitions (2.66, 2.67)}\]</span> <span
+class="math display">\[\text{Then their sum } [A,B] + \{A,B\} = 2AB = 0
+\text{ We now multiply both sides on the left by } A^{-1}
+\text{}\]</span> <span class="math display">\[A^{-1}2AB = A^{-1}0
+\implies 2B = 0 \implies B = 0.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.45</strong></p>
@@ -301,15 +483,146 @@ conjugates}\]</span> <span class="math display">\[=
 and B <span class="math display">\[[A,B]^{\dagger} = (AB - BA)^{\dagger}
 \text{ from (2.66)}\]</span> <span class="math display">\[= ((AB -
 BA)^{T})^{*} \text{ from definition of Hermitian conjugate}\]</span>
-<span class="math display">\[= ((AB)^{T} - (BA)^{T}) ^ {*} = B^TA^T -
+<span class="math display">\[= ((AB)^{T} - (BA)^{T}) ^ {*} = (B^TA^T -
 A^TB^T)^* = (B^T)^*(A^T)^* - (A^T)^*(B^T)^*\]</span> <span
 class="math display">\[= B^{\dagger}A^{\dagger} - A^{\dagger}B^{\dagger}
-= [B^{\dagger},A^{\dagger}]\]</span> 0◻</p>
+= [B^{\dagger},A^{\dagger}]\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.46</strong></p>
 <p>Consider <span class="math inline">\([A, B] = AB - BA = -(-AB + BA) =
-- (BA - AB) = -[B, A]\)</span> 0◻</p>
+- (BA - AB) = -[B, A]\)</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.47</strong></p>
+<p><span class="math display">\[A, B \text{ are Hermitian, then each is
+equal to their conjugate transpose } A = A^{\dagger}, B =
+B^{\dagger}\]</span> <span class="math display">\[\text{Consider } (i[A,
+B])^{\dagger} = i^{*}[A,B]^{\dagger} \text{ as } (cA)^{\dagger} =
+c^{*}A^{\dagger} \text{ where } c \text{ is a complex scalar}.\]</span>
+<span class="math display">\[= (-i)[A, B]^{\dagger} =
+(-i)[B^{\dagger},A^{\dagger}] \text{ from Exercise 2.45}\]</span> <span
+class="math display">\[= (-i)[B, A] = -(i)(-[A,B]) \text{ from exercise
+2.46} = i[A,B] \implies i[A,B] \text{ is Hermitian}\]</span></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.48</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.49</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.50</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.51</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.52</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.53</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.54</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.55</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.56</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.57: (Cascaded measurements are single
+measurements)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.58</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.59</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.60</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.61</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.62</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.63</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.64</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.65</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.66</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.67</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.68</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.69</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.70</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.71: (Criterion to decide if a state is mixed or
+pure)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.72: (Bloch sphere for mixed states)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.73</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.74</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.75</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.76</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.77</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.78</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.79</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.80</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.81: (Freedom in purifications)</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 2.82</strong></p>
+</div>
+<div class="framed">
+<p><strong>End of Chapter Exercise 2.1: (Functions of the Pauli
+matrices)</strong></p>
+</div>
+<div class="framed">
+<p><strong>End of Chapter Exercise 2.2: (Properties of the Schmidt
+number)</strong></p>
+</div>
+<div class="framed">
+<p><strong>End of Chapter Exercise 2.3: (Tsirelson’s
+inequality)</strong></p>
 </div>
 </body>
 </html>
