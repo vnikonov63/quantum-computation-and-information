@@ -300,7 +300,17 @@ conjugates}\]</span> <span class="math display">\[=
 (2))}\]</span></p>
 </div>
 <div class="framed">
-<p><strong>Exercise 2.7</strong></p>
+<p><strong>Exercise 2.7</strong> <span class="math inline">\((\ket{v},
+\ket{w}) =  ((1, -1), (1, 1)) = \begin{bmatrix} 1^* -1^* \end{bmatrix}
+\begin{bmatrix} 1^* \\ 1^* \end{bmatrix} = \begin{bmatrix} 1 -1
+\end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = 1 - 1 = 0 \text{
+precisely following (2.14) we establish, that }\ket{w} \text{ and }
+\ket{v} \text{ are orthogonal}\)</span> Their normalized forms are <span
+class="math inline">\(\frac{v}{\| \ket{v \|}} = (\frac{1}{\sqrt{2}},
+\frac{-1}{\sqrt{2}})\)</span> and <span
+class="math inline">\(\frac{w}{\| \ket{w \|}} = (\frac{1}{\sqrt{2}},
+\frac{1}{\sqrt{2}})\)</span>, as both have a norm of <span
+class="math inline">\(\sqrt{2}\)</span>.</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.8</strong></p>
@@ -363,12 +373,35 @@ class="math inline">\(det(\begin{bmatrix} - \lambda &amp; 1 \\ 1 &amp;
 </div>
 <div class="framed">
 <p><strong>Exercise 2.13</strong></p>
+<p><span class="math display">\[(\ket{w}\bra{v})^{\dagger} =
+\bra{v}^{\dagger}\ket{w}^{\dagger} \text{ from the fact, that }
+(AB)^{\dagger} = B^{\dagger}A^{\dagger}.\]</span> <span
+class="math display">\[\bra{v}^{\dagger}\ket{w}^{\dagger} =
+\ket{v}\bra{w} \text{ by convention}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.14: (Anti-linearity of the adjoint)</strong></p>
+<p><span class="math display">\[\text{Consider } (\sum_i{a_iA_i})^{*} =
+\sum_i{(a_iA_i)^{*}} = \sum_i{a_i^*A_i^*} \text{ as conjugation is
+linear}\]</span></p>
+<p><span class="math display">\[\text{ Now consider }
+((\sum_i{a_iA_i})^{*})^{T} = (\sum_i{a_i^*A_i^*})^{T} =
+\sum_i{a_i^*(A_i^*)^{T}} = \sum_i{a_i^*A_i^{\dagger}}\text{ as } a_i
+\text{ is a scalar }\]</span></p>
+<p><span class="math display">\[\text{ Thus we have established, that
+adjoint operation is anti-linear, namely: } \sum_i{a_iA_i}^{\dagger} =
+\sum_i{a_i^{*}A_i^{\dagger}}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.15</strong></p>
+<p><span class="math inline">\((A^{\dagger})^{\dagger} =
+((A^{\dagger})^{T})^{*} = (((A^{T})^{*})^{T})^{*} =
+(((A^{T})^{*})^{*})^{T}\)</span>, as taking a conjugate and transposing
+can easily be interchanged. Conjugating each element in the matrix twice
+just yields the same initial value, as <span
+class="math inline">\((z^{*})^{*} = z , \forall z \in
+\mathbb{C}\)</span> So we have: <span class="math inline">\(((A^T)^T) =
+A\)</span> from the definition of the transpose.</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.16</strong></p>
@@ -605,6 +638,12 @@ class="math display">\[= (-i)[B, A] = -(i)(-[A,B]) \text{ from exercise
 </div>
 <div class="framed">
 <p><strong>Exercise 2.52</strong></p>
+<p><span class="math display">\[H^2 = \frac{1}{2}\begin{bmatrix}1 &amp;
+1\\ 1 &amp; -1\end{bmatrix}\begin{bmatrix}1 &amp; 1\\ 1 &amp;
+-1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1*1 + 1*1 &amp; 1*1 - 1*1
+\\ 1 * 1 - 1 * 1 &amp; 1 * 1 + (-1)*(-1)\end{bmatrix} =
+\frac{1}{2}\begin{bmatrix}2 &amp; 0 \\ 0 &amp; 2\end{bmatrix} =
+I\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.53</strong></p>
@@ -713,8 +752,259 @@ inequality)</strong></p>
 <h2 class="unnumbered"
 id="chapter-3-introduction-to-computer-science">Chapter 3: Introduction
 to computer science</h2>
+<div class="framed">
+<p><strong>Exercise 3.1: Non-computable processes in Nature</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.2: Turing numbers</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.3: Turing machine to reverse a bit
+string</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.4: Turing machine to add modulo 2</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.5: Halting problem with no inputs</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.6: Probabilistic halting problem</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.7: Halting oracle</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.8: Universality of NAND</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.9:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.10:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.11:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.12:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.13:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.14:</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.15: Lower bound for compare-and-swap based
+sorts</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.16</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.17</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.18</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.19</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.20</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.21</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.22</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.23</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.24</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.25</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.26</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.27</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.28</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.29</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.30</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.31</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 3.32</strong></p>
+</div>
 <h2 class="unnumbered" id="chapter-4-quantum-circuits">Chapter 4:
 Quantum circuits</h2>
+<div class="framed">
+<p><strong>Exercise 4.1</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.2</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.3</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.4</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.5</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.6</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.7</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.8</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.9</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.10</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.11</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.12</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.13</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.14</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.15</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.16</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.17</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.18</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.19</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.20</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.21</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.22</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.23</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.24</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.25</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.26</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.27</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.28</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.29</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.30</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.31</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.32</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.33</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.34</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.35</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.36</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.27</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.38</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.39</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.40</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.41</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.42</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.43</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.44</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.45</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.46</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.47</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.48</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.49</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.50</strong></p>
+</div>
+<div class="framed">
+<p><strong>Exercise 4.51</strong></p>
+</div>
 <h2 class="unnumbered"
 id="chapter-5-the-quantum-fourier-transform-and-its-applications">Chapter
 5: The quantum Fourier transform and its applications</h2>

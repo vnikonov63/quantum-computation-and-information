@@ -142,9 +142,9 @@
 
 \begin{framed}
     \noindent \textbf{Exercise 2.7}
-    
     \medskip
-    
+    $(\ket{v}, \ket{w}) =  ((1, -1), (1, 1)) = \begin{bmatrix} 1^* -1^* \end{bmatrix} \begin{bmatrix} 1^* \\ 1^* \end{bmatrix} = \begin{bmatrix} 1 -1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = 1 - 1 = 0 \text{ precisely following (2.14) we establish, that }\ket{w} \text{ and } \ket{v} \text{ are orthogonal}$
+    Their normalized forms are $\frac{v}{\| \ket{v \|}} = (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}})$ and $\frac{w}{\| \ket{w \|}} = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$, as both have a norm of $\sqrt{2}$.
     
 \end{framed}
 
@@ -219,7 +219,13 @@
     \noindent \textbf{Exercise 2.13}
     
     \medskip
-    
+
+    $$
+    (\ket{w}\bra{v})^{\dagger} = \bra{v}^{\dagger}\ket{w}^{\dagger} \text{ from the fact, that } (AB)^{\dagger} = B^{\dagger}A^{\dagger}. 
+    $$
+    $$
+        \bra{v}^{\dagger}\ket{w}^{\dagger} = \ket{v}\bra{w} \text{ by convention}
+    $$
     
 \end{framed}
 
@@ -229,6 +235,18 @@
     \noindent \textbf{Exercise 2.14: (Anti-linearity of the adjoint)}
     
     \medskip
+
+    $$
+    \text{Consider } (\sum_i{a_iA_i})^{*} = \sum_i{(a_iA_i)^{*}} = \sum_i{a_i^*A_i^*} \text{ as conjugation is linear}
+    $$
+
+    $$
+    \text{ Now consider } ((\sum_i{a_iA_i})^{*})^{T} = (\sum_i{a_i^*A_i^*})^{T} = \sum_i{a_i^*(A_i^*)^{T}} = \sum_i{a_i^*A_i^{\dagger}}\text{ as } a_i \text{ is a scalar }
+    $$
+
+    $$
+    \text{ Thus we have established, that adjoint operation is anti-linear, namely: } \sum_i{a_iA_i}^{\dagger} = \sum_i{a_i^{*}A_i^{\dagger}}
+    $$
     
     
 \end{framed}
@@ -240,6 +258,7 @@
     
     \medskip
     
+    $(A^{\dagger})^{\dagger} = ((A^{\dagger})^{T})^{*} = (((A^{T})^{*})^{T})^{*} = (((A^{T})^{*})^{*})^{T}$, as taking a conjugate and transposing can easily be interchanged. Conjugating each element in the matrix twice just yields the same initial value, as $(z^{*})^{*} = z , \forall z \in \mathbb{C}$ So we have: $((A^T)^T) = A$ from the definition of the transpose. 
     
 \end{framed}
 
@@ -690,7 +709,10 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \noindent \textbf{Exercise 2.52}
     
     \medskip
-    
+
+    $$
+    H^2 = \frac{1}{2}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1*1 + 1*1 & 1*1 - 1*1 \\ 1 * 1 - 1 * 1 & 1 * 1 + (-1)*(-1)\end{bmatrix} = \frac{1}{2}\begin{bmatrix}2 & 0 \\ 0 & 2\end{bmatrix} = I
+    $$
     
 \end{framed}
 
@@ -1025,7 +1047,890 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
 \end{framed}
 
 \subsection*{Chapter 3: Introduction to computer science}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.1: Non-computable processes in Nature}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.2: Turing numbers}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.3: Turing machine to reverse a bit string}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.4: Turing machine to add modulo 2}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.5: Halting problem with no inputs}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.6: Probabilistic halting problem}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.7: Halting oracle}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.8: Universality of NAND}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.9: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.10: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.11: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.12: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.13: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.14: }
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.15: Lower bound for compare-and-swap based sorts}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.16}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.17}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.18}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.19}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.20}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.21}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.22}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.23}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.24}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.25}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.26}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.27}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.28}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.29}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.30}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.31}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.32}
+    
+    \medskip
+    
+    
+\end{framed}
+
 \subsection*{Chapter 4: Quantum circuits}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.1}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.2}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.3}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.4}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.5}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.6}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.7}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.8}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.9}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.10}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.11}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.12}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.13}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.14}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.15}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.16}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.17}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.18}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.19}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.20}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.21}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.22}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.23}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.24}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.25}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.26}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.27}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.28}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.29}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.30}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.31}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.32}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.33}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.34}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.35}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.36}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.27}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.38}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.39}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.40}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.41}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.42}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.43}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.44}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.45}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.46}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.47}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.48}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.49}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.50}
+    
+    \medskip
+    
+    
+\end{framed}
+
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 4.51}
+    
+    \medskip
+    
+    
+\end{framed}
+
 \subsection*{Chapter 5: The quantum Fourier transform and its applications}
 \subsection*{Chapter 6: Quantum search algorithms}
 \subsection*{Chapter 7: Quantum computers: physical realization}
