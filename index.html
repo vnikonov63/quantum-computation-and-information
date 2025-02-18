@@ -568,6 +568,104 @@ that tensor product is not commutative.</p></li>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.29</strong></p>
+<p><strong>Explicitly</strong> <span
+class="math display">\[\text{Consider unitary } A, B \text{ s.t }
+AA^{\dagger} = I, BB^{\dagger}=I. \text{ Assume } A \text{ is } m\times
+n \text{ matrix, and } B \text{ is } p \times q \text{ matrix}.\]</span>
+<span class="math display">\[\text{Then }A^{\dagger} \text{ is a }
+n\times m \text{ matrix, and } B^{\dagger} \text{ is a } q\times p
+\text{ matrix, as we are transposing, and}.\]</span> <span
+class="math display">\[\text{taking a conjugate of each element does not
+change the dimensions.}\]</span> <span class="math display">\[(A \otimes
+B)(A \otimes B)^{\dagger} = (A \otimes B)(A^{\dagger} \otimes
+B^{\dagger}) \text{ from (2.53)}\]</span> <span
+class="math display">\[\text{From (2.50) } A \otimes B \text{ has } mp
+\text{ rows and } nq \text{ columns, and
+} A^{\dagger} \otimes B^{\dagger} \text{ has } qn \text{ rows and } pm
+\text{ columns.}\]</span> <span class="math display">\[A \otimes B =
+    \begin{bmatrix}
+    a_{11}B &amp; a_{12}B &amp; \dots &amp; a_{1n}B\\
+    a_{21}B &amp; a_{22}B &amp; \dots &amp; a_{2n}B\\
+    \vdots  &amp; \vdots &amp;&amp; \vdots\\
+    a_{m1}B &amp; a_{m2}B &amp;\dots &amp; a_{mn}B
+    \end{bmatrix}
+    \text{where } a_{ij} \text{ are corresponding elements of }
+A\]</span> <span class="math display">\[A^{\dagger} \otimes B^{\dagger}
+=
+    \begin{bmatrix}
+    a^{\dagger}_{11}B^{\dagger} &amp; a^{\dagger}_{12}B^{\dagger} &amp;
+\dots &amp; a^{\dagger}_{1m}B^{\dagger}\\
+    a_{21}B^{\dagger} &amp; a_{22}B^{\dagger} &amp; \dots &amp;
+a_{2m}B^{\dagger}\\
+    \vdots  &amp; \vdots &amp;&amp; \vdots\\
+    a_{n1}B^{\dagger} &amp; a_{n2}B^{\dagger} &amp;\dots &amp;
+a_{nm}B^{\dagger}
+    \end{bmatrix}
+    \text{where } a^{\dagger}_{ij} \text{ are corresponding elements of
+} A^{\dagger}\]</span> As number of block rows in (1) is matching number
+of block columns in (2), and each block in (1) has the same number of
+columns as each block has rows in (2) then we can use Block Matrix
+Multiplication Formula. <span class="math display">\[C_{ij} =
+\sum_{k}a_{ik}Ba^{\dagger}_{kj}B^{\dagger} =
+\sum_{k}{a_{ik}a^{\dagger}_{kj}BB^{\dagger}} =
+\sum_{k}{a_{ik}a^{\dagger}_{kj}I_p} \text{ as } B \text{ is
+unitary}.\]</span> <span class="math display">\[\text{We know, that }
+AA^{\dagger} = I_m \implies (AA^{\dagger})_{ij} = (I_m)_{ij} \implies
+\sum_{k}{a_{ik}a^{\dagger}_{kj}} = \delta_{ij}\]</span> <span
+class="math display">\[\text{Thus, } C_{ij} = \begin{cases}I_p &amp; i =
+j \\0 &amp; i \neq j\end{cases} \implies (A \otimes B)(A^{\dagger}
+\otimes B^{\dagger}) = \begin{bmatrix}
+    I_p &amp; 0 &amp; \dots &amp; 0\\
+    0 &amp; I_p &amp; \dots &amp; 0\\
+    \vdots  &amp; \vdots &amp;&amp; \vdots\\
+    0 &amp; 0 &amp;\dots &amp;I_p
+    \end{bmatrix}
+    = I_{mp}\]</span> <span class="math display">\[\text{One could
+follow the same line of arguments as above to determine, that }
+(A^{\dagger} \otimes B^{\dagger})(A \otimes B) = I_{qn}\]</span> <span
+class="math display">\[\text{Thus tensor product of two unitary
+operators is unitary.}\]</span> <strong>Mixed-product
+property</strong><br />
+<br />
+Consider matrices <span class="math inline">\(A, B, C, D\)</span>, where
+<span class="math inline">\(A\)</span> is <span class="math inline">\(m
+\times n\)</span>, <span class="math inline">\(B\)</span> is <span
+class="math inline">\(p \times q\)</span>, <span
+class="math inline">\(C\)</span> is <span class="math inline">\(n \times
+r\)</span>, <span class="math inline">\(D\)</span> is <span
+class="math inline">\(q \times s\)</span>. It is important, that number
+of columns in <span class="math inline">\(A,B\)</span> matches the
+number of rows in <span class="math inline">\(C,D\)</span> respectively.
+So when we compute <span class="math inline">\((A \otimes B)\)</span> we
+have a matrix of size <span class="math inline">\(mp \times qn\)</span>,
+<span class="math inline">\((C \otimes D)\)</span> we have a matrix of
+size <span class="math inline">\(nq \otimes rs\)</span>, and when can
+multiply them, as the dimensions do match, we expect matrix of size
+<span class="math inline">\(mp \times rs\)</span> as a result. <span
+class="math display">\[(A\otimes B)(C \otimes D) =
+\begin{bmatrix}
+\sum_k{a_{1k}Bc_{k1}D} &amp; \sum_k{a_{1k}Bc_{k2}D} &amp; \dots &amp;
+\sum_k{a_{1k}Bc_{kr}D} \\
+\sum_k{a_{2k}Bc_{k1}D} &amp; \sum_k{a_{2k}Bc_{k2}D} &amp; \dots &amp;
+\sum_k{a_{2k}Bc_{kr}D} \\
+\vdots  &amp; \vdots &amp;&amp; \vdots\\
+\sum_k{a_{mk}Bc_{k1}D} &amp; \sum_k{a_{mk}Bc_{k2}D} &amp; \dots &amp;
+\sum_k{a_{mk}Bc_{kr}D} \\
+\end{bmatrix}
+=\]</span> <span class="math display">\[=
+\begin{bmatrix}
+(AC)_{11}BD &amp; (AC)_{12}BD &amp; \dots &amp; (AC)_{1r}BD \\
+(AC)_{21}BD &amp; (AC)_{22}BD &amp; \dots &amp; (AC)_{2r}BD \\
+\vdots  &amp; \vdots &amp;&amp; \vdots\\
+(AC)_{m1}BD &amp; (AC)_{m2}BD &amp; \dots &amp; (AC)_{mr}BD \\
+\end{bmatrix} = (AC) \otimes (BD).\]</span> <strong>Using properties of
+tensor products</strong><br />
+<br />
+<span class="math display">\[(A \otimes B)(A^{\dagger} \otimes
+B^{\dagger}) = (AA^{\dagger}) \otimes(BB^{\dagger}) = I_m \otimes I_p =
+I_{mp}\]</span> <span class="math display">\[\text{with the number of
+rows and columns between the original matrix and the transpose matching
+trivially.}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.30</strong></p>

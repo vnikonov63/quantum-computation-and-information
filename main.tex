@@ -461,8 +461,94 @@
     \noindent \textbf{Exercise 2.29}
     
     \medskip
-    
-    
+\textbf{Explicitly}
+    $$
+    \text{Consider unitary } A, B \text{ s.t } AA^{\dagger} = I, BB^{\dagger}=I. \text{ Assume } A \text{ is } m\times n \text{ matrix, and } B \text{ is } p \times q \text{ matrix}.
+    $$
+    $$
+    \text{Then }A^{\dagger} \text{ is a } n\times m \text{ matrix, and } B^{\dagger} \text{ is a } q\times p \text{ matrix, as we are transposing, and}.
+    $$
+    $$
+    \text{taking a conjugate of each element does not change the dimensions.}
+    $$
+    $$
+    (A \otimes B)(A \otimes B)^{\dagger} = (A \otimes B)(A^{\dagger} \otimes B^{\dagger}) \text{ from (2.53)} 
+    $$
+    $$
+    \text{From (2.50) } A \otimes B \text{ has } mp \text{ rows and } nq \text{ columns, and 
+ } A^{\dagger} \otimes B^{\dagger} \text{ has } qn \text{ rows and } pm \text{ columns.}
+    $$
+    \begin{equation}
+    A \otimes B = 
+    \begin{bmatrix}
+    a_{11}B & a_{12}B & \dots & a_{1n}B\\
+    a_{21}B & a_{22}B & \dots & a_{2n}B\\
+    \vdots  & \vdots && \vdots\\
+    a_{m1}B & a_{m2}B &\dots & a_{mn}B
+    \end{bmatrix}
+    \text{where } a_{ij} \text{ are corresponding elements of } A 
+    \end{equation}
+    \begin{equation}
+    A^{\dagger} \otimes B^{\dagger} = 
+    \begin{bmatrix}
+    a^{\dagger}_{11}B^{\dagger} & a^{\dagger}_{12}B^{\dagger} & \dots & a^{\dagger}_{1m}B^{\dagger}\\
+    a_{21}B^{\dagger} & a_{22}B^{\dagger} & \dots & a_{2m}B^{\dagger}\\
+    \vdots  & \vdots && \vdots\\
+    a_{n1}B^{\dagger} & a_{n2}B^{\dagger} &\dots & a_{nm}B^{\dagger}
+    \end{bmatrix}
+    \text{where } a^{\dagger}_{ij} \text{ are corresponding elements of } A^{\dagger}
+    \end{equation}
+    As number of block rows in (1) is matching number of block columns in (2), and each block in (1) has the same number of columns as each block has rows in (2) then we can use Block Matrix Multiplication Formula.
+    \begin{equation}
+        C_{ij} = \sum_{k}a_{ik}Ba^{\dagger}_{kj}B^{\dagger} = \sum_{k}{a_{ik}a^{\dagger}_{kj}BB^{\dagger}} = \sum_{k}{a_{ik}a^{\dagger}_{kj}I_p} \text{ as } B \text{ is unitary}.
+    \end{equation}
+    $$
+    \text{We know, that } AA^{\dagger} = I_m \implies (AA^{\dagger})_{ij} = (I_m)_{ij} \implies \sum_{k}{a_{ik}a^{\dagger}_{kj}} = \delta_{ij}
+    $$
+    $$
+    \text{Thus, } C_{ij} = \begin{cases}I_p & i = j \\0 & i \neq j\end{cases} \implies (A \otimes B)(A^{\dagger} \otimes B^{\dagger}) = \begin{bmatrix}
+    I_p & 0 & \dots & 0\\
+    0 & I_p & \dots & 0\\
+    \vdots  & \vdots && \vdots\\
+    0 & 0 &\dots &I_p
+    \end{bmatrix} 
+    = I_{mp}
+    $$
+    $$
+    \text{One could follow the same line of arguments as above to determine, that } (A^{\dagger} \otimes B^{\dagger})(A \otimes B) = I_{qn}
+    $$
+    $$
+    \text{Thus tensor product of two unitary operators is unitary.}
+    $$
+\textbf{Mixed-product property} \\\\
+Consider matrices $A, B, C, D$, where $A$ is $m \times n$, $B$ is $p \times q$, $C$ is $n \times r$, $D$ is $q \times s$. It is important, that number of columns in $A,B$ matches the number of rows in $C,D$ respectively. So when we compute $(A \otimes B)$ we have a matrix of size $ mp \times qn$, $(C \otimes D)$ we have a matrix of size $nq \otimes rs$, and when can multiply them, as the dimensions do match, we expect matrix of size $mp \times rs$ as a result.
+$$
+(A\otimes B)(C \otimes D) = 
+\begin{bmatrix}
+ \sum_k{a_{1k}Bc_{k1}D} & \sum_k{a_{1k}Bc_{k2}D} & \dots & \sum_k{a_{1k}Bc_{kr}D} \\
+ \sum_k{a_{2k}Bc_{k1}D} & \sum_k{a_{2k}Bc_{k2}D} & \dots & \sum_k{a_{2k}Bc_{kr}D} \\
+ \vdots  & \vdots && \vdots\\
+ \sum_k{a_{mk}Bc_{k1}D} & \sum_k{a_{mk}Bc_{k2}D} & \dots & \sum_k{a_{mk}Bc_{kr}D} \\
+\end{bmatrix}
+=
+$$
+$$
+=
+\begin{bmatrix}
+(AC)_{11}BD & (AC)_{12}BD & \dots & (AC)_{1r}BD \\
+ (AC)_{21}BD & (AC)_{22}BD & \dots & (AC)_{2r}BD \\
+ \vdots  & \vdots && \vdots\\
+ (AC)_{m1}BD & (AC)_{m2}BD & \dots & (AC)_{mr}BD \\
+\end{bmatrix} = (AC) \otimes (BD).
+$$
+\textbf{Using properties of tensor products} \\\\
+$$
+(A \otimes B)(A^{\dagger} \otimes B^{\dagger}) = (AA^{\dagger}) \otimes(BB^{\dagger}) = I_m \otimes I_p = I_{mp}
+$$
+$$
+\text{with the number of rows and columns between the original matrix and the transpose matching trivially.}
+$$
+
 \end{framed}
 
 \bigskip
