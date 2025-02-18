@@ -530,9 +530,41 @@ class="math display">\[\ket{\psi}^{\otimes3} = \ket{\psi}^{\otimes2}
 </div>
 <div class="framed">
 <p><strong>Exercise 2.27</strong></p>
+<ol>
+<li><p><span class="math display">\[X \otimes Z = \begin{bmatrix}0 &amp;
+1\\ 1 &amp; 0\end{bmatrix}\begin{bmatrix}1 &amp; 0\\ 0 &amp;
+-1\end{bmatrix} =
+        \begin{bmatrix}0\begin{bmatrix}1 &amp; 0\\ 0 &amp;
+-1\end{bmatrix} &amp; 1\begin{bmatrix}1 &amp; 0\\ 0 &amp;
+-1\end{bmatrix}\\ 1\begin{bmatrix}1 &amp; 0\\ 0 &amp; -1\end{bmatrix}
+&amp; 0\begin{bmatrix}1 &amp; 0\\ 0 &amp; -1\end{bmatrix}\end{bmatrix} =
+\begin{bmatrix} 0 &amp; 0 &amp; 1 &amp; 0\\ 0 &amp; 0&amp; 0 &amp; -1\\
+1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; -1 &amp; 0 &amp;
+0\end{bmatrix}\]</span></p></li>
+<li><p><span class="math display">\[I \otimes X = \begin{bmatrix}1 &amp;
+0 \\ 0 &amp; 1\end{bmatrix} \otimes \begin{bmatrix}0 &amp; 1 \\ 1 &amp;
+0\end{bmatrix} = \begin{bmatrix}1\begin{bmatrix}0 &amp; 1 \\ 1 &amp;
+0\end{bmatrix} &amp; 0\begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}
+\\ 0\begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} &amp;
+1\begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}\end{bmatrix} =
+\begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 1 &amp;
+0\end{bmatrix}\]</span></p></li>
+<li><p><span class="math display">\[X \otimes I = \begin{bmatrix}0 &amp;
+1 \\ 1 &amp; 0\end{bmatrix} \otimes \begin{bmatrix}1 &amp; 0 \\ 0 &amp;
+1\end{bmatrix} = \begin{bmatrix}0\begin{bmatrix}1 &amp; 0 \\ 0 &amp;
+1\end{bmatrix} &amp; 1\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}
+\\ 1\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix} &amp;
+0\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}\end{bmatrix}
+=\begin{bmatrix} 0 &amp; 0 &amp; 1 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp;
+0\end{bmatrix}\]</span> As parts 2 and 3 are different, we can conclude,
+that tensor product is not commutative.</p></li>
+</ol>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.28</strong></p>
+<p>Consider <span class="math inline">\((A \otimes B)^{*}\)</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.29</strong></p>
@@ -548,6 +580,196 @@ class="math display">\[\ket{\psi}^{\otimes3} = \ket{\psi}^{\otimes2}
 </div>
 <div class="framed">
 <p><strong>Exercise 2.33</strong></p>
+<p><strong>Base case n = 1</strong> <span
+class="math display">\[\text{Substituting } \ket{1} \text{ with }
+\begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with }
+\begin{bmatrix}0 \\ 1\end{bmatrix}\]</span> <span
+class="math display">\[\text{ (2.54) becomes } H =
+\frac{1}{\sqrt{2}}[(\begin{bmatrix}1 \\ 0\end{bmatrix} +
+\begin{bmatrix}0 \\ 1\end{bmatrix})\begin{bmatrix}1 &amp; 0\end{bmatrix}
++ (\begin{bmatrix}1 \\ 0\end{bmatrix} - \begin{bmatrix}0 \\
+1\end{bmatrix})\begin{bmatrix}0 &amp; 1\end{bmatrix}]\]</span> <span
+class="math display">\[= \frac{1}{\sqrt2}(\begin{bmatrix}1 \\
+1\end{bmatrix}\begin{bmatrix}1 &amp; 0\end{bmatrix} + \begin{bmatrix}1
+\\ -1\end{bmatrix}\begin{bmatrix}0 &amp; 1\end{bmatrix}) =
+\frac{1}{\sqrt{2}}(\begin{bmatrix}1 &amp; 0 \\ 1 &amp;
+0\end{bmatrix}+\begin{bmatrix} 0 &amp; 1 \\ 0 &amp; -1\end{bmatrix}) =
+\frac{1}{\sqrt{2}}\begin{bmatrix}1 &amp; 1 \\ 1 &amp;
+-1\end{bmatrix}\]</span> <span class="math display">\[\text{Which is
+indeed the classical matrix representation of the Hadamard
+operator}\]</span> <strong>Indiction hypothesis n = k</strong> <span
+class="math display">\[\text{ Assume for } n = k \text{ the following
+holds } H^{\otimes k} = \frac{1}{\sqrt{2^k}}\sum_{x,y\in
+\{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}}\]</span> <span
+class="math display">\[\text{The subscript in the sum directly above
+just means, that x and y are binary strings of length k}\]</span>
+<strong>Induction step n = k + 1</strong> <span
+class="math display">\[H^{\otimes (k+1)} =
+(\frac{1}{\sqrt{2}}[(\ket{0}+\ket{1})\bra{0} +
+(\ket{0}-\ket{1})\bra{1}]) \otimes \frac{1}{\sqrt{2^k}}\sum_{x,y\in
+\{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}}\]</span> <span
+class="math display">\[= (\frac{1}{\sqrt{2}}(\ket{0}\bra{0} +
+\ket{1}\bra{0} + \ket{0}\bra{1} - \ket{1}\bra{1}) \otimes H^{\otimes
+k}\]</span> <span class="math display">\[= \frac{1}{\sqrt{2^1}}\sum_{x,y
+\in \{0, 1\}}{(-1)^{xy}\ket{x}\bra{y}} \otimes
+\frac{1}{\sqrt{2^k}}\sum_{x,y\in \{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}}
+\overset{*}{=}\]</span> <span class="math display">\[\text{We compute }
+xy \text{ to determine the sign by performing the binary inner
+product}\]</span></p>
+<div id="tab:binary_inner_product">
+<table>
+<caption><span class="math inline">\(xy \in \{0,1\}\)</span></caption>
+<thead>
+<tr>
+<th style="text-align: center;">xy</th>
+<th style="text-align: center;">x</th>
+<th style="text-align: center;">y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab:binary_inner_product">
+<table>
+<caption>Binary inner product mod 2 for <span class="math inline">\(x, y
+\in \{0,1\}^2\)</span></caption>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="math inline">\(xy = x_1y_1
++ x_2y_2 \mod 2\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(x=x_1x_2\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(y=y_1y_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">00</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">00</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">00</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">00</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math display">\[\text{We can extend (2.43, 2.44) to }
+\sum_{i}{\ket{a_i}} \otimes \sum_{i}{\ket{b_i}} =
+\sum_{i}\sum_{j}{(\ket{a_i} \otimes \ket{b_i})}
+        \tag{1}\]</span> <span class="math display">\[=
+\frac{1}{\sqrt{2^{k+1}}}\sum_{x&#39;,y&#39;\in\{0,1\}}\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{((-1)^{x&#39;y&#39;}\ket{x&#39;}\bra{y&#39;})
+\otimes
+((-1)^{x&#39;&#39;y&#39;&#39;}\ket{x&#39;&#39;}\bra{y&#39;&#39;})}
+     \text{ from (1)}\]</span> <span class="math display">\[=
+\frac{1}{\sqrt{2^{k+1}}}\sum_{x&#39;,y&#39;\in\{0,1\}}\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;y&#39;}(-1)^{x&#39;&#39;y&#39;&#39;}[(\ket{x&#39;}\bra{y&#39;})
+\otimes (\ket{x&#39;&#39;}\bra{y&#39;&#39;})]}
+     \text{ from (2.42)} \overset{**}{=}\]</span> <span
+class="math display">\[\text{We want to perform the change of variables
+where } x \text{ is } (x&#39;, x&#39;&#39;), \text{ where } x&#39;
+\text{ is 1 bit and } x&#39;&#39; \text{ is k bit long}\]</span> <span
+class="math display">\[\{0,1\} \times \{0,1\}^k = \{(x, y) \mid x \in
+\{0,1\}, y \in \{0,1\}^k\} = \{(0, y) \mid y \in \{0,1\}^k\} \cup \{(1,
+y) \mid y \in \{0,1\}^k\} = \{0,1\}^{k+1}\]</span> <span
+class="math display">\[\text{So, Considering }
+(-1)^{x&#39;y&#39;}(-1)^{x&#39;&#39;y&#39;&#39;} \text { we expand the
+definition of the binary inner product and have: }\]</span> <span
+class="math display">\[(-1)^{x&#39;y&#39;}(-1)^{\sum_{i = 1}^{k}{x_i}}
+=\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.34</strong></p>

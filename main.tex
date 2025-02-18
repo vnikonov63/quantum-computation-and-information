@@ -1,10 +1,13 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, framed}  
 \usepackage{amsthm}            
+\usepackage{booktabs} 
+\usepackage{float} 
 \usepackage{graphicx}          
 \usepackage{hyperref}          
 \usepackage{enumitem}     
 \usepackage{braket}
+\usepackage{wasysym}
 \usepackage[margin=1in]{geometry}  
 
 
@@ -19,7 +22,7 @@
 
 \subsection*{Chapter 2: Introduction to quantum mechanics}
 
-\begin{framed} % Creates a visually separated block
+\begin{framed} 
     \noindent \textbf{Exercise 2.1: (Linear Dependence Example)}
     
     \medskip
@@ -423,7 +426,22 @@
     \noindent \textbf{Exercise 2.27}
     
     \medskip
-    
+    \begin{enumerate}
+        \item 
+        $$
+        X \otimes Z = \begin{bmatrix}0 & 1\\ 1 & 0\end{bmatrix}\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix} = 
+        \begin{bmatrix}0\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix} & 1\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix}\\ 1\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix} & 0\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix}\end{bmatrix} = \begin{bmatrix} 0 & 0 & 1 & 0\\ 0 & 0& 0 & -1\\ 1 & 0 & 0 & 0\\ 0 & -1 & 0 & 0\end{bmatrix}
+        $$
+        \item 
+        $$
+        I \otimes X = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} \otimes \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}1\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} & 0\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} \\ 0\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} & 1\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}\end{bmatrix} = \begin{bmatrix} 0 & 1 & 0 & 0\\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 1\\ 0 & 0 & 1 & 0\end{bmatrix}
+        $$
+        \item 
+        $$
+        X \otimes I = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} \otimes \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} = \begin{bmatrix}0\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} & 1\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} \\ 1\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} & 0\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\end{bmatrix} =\begin{bmatrix} 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1\\ 1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0\end{bmatrix}
+        $$
+        As parts 2 and 3 are different, we can conclude, that tensor product is not commutative.
+    \end{enumerate}
     
 \end{framed}
 
@@ -433,7 +451,7 @@
     \noindent \textbf{Exercise 2.28}
     
     \medskip
-    
+    Consider $(A \otimes B)^{*}$
     
 \end{framed}
 
@@ -483,8 +501,93 @@
     \noindent \textbf{Exercise 2.33}
     
     \medskip
-    
-    
+    \textbf{Base case n = 1}
+    $$
+    \text{Substituting } \ket{1} \text{ with } \begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with } \begin{bmatrix}0 \\ 1\end{bmatrix} $$
+    $$\text{ (2.54) becomes } H = \frac{1}{\sqrt{2}}[(\begin{bmatrix}1 \\ 0\end{bmatrix} + \begin{bmatrix}0 \\ 1\end{bmatrix})\begin{bmatrix}1 & 0\end{bmatrix} + (\begin{bmatrix}1 \\ 0\end{bmatrix} - \begin{bmatrix}0 \\ 1\end{bmatrix})\begin{bmatrix}0 & 1\end{bmatrix}]
+    $$
+    $$
+    = \frac{1}{\sqrt2}(\begin{bmatrix}1 \\ 1\end{bmatrix}\begin{bmatrix}1 & 0\end{bmatrix} + \begin{bmatrix}1 \\ -1\end{bmatrix}\begin{bmatrix}0 & 1\end{bmatrix}) = \frac{1}{\sqrt{2}}(\begin{bmatrix}1 & 0 \\ 1 & 0\end{bmatrix}+\begin{bmatrix} 0 & 1 \\ 0 & -1\end{bmatrix}) = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}
+    $$
+    $$
+    \text{Which is indeed the classical matrix representation of the Hadamard operator}
+    $$
+    \textbf{Indiction hypothesis n = k}
+    $$
+    \text{ Assume for } n = k \text{ the following holds } H^{\otimes k} = \frac{1}{\sqrt{2^k}}\sum_{x,y\in \{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}}
+    $$
+    $$
+    \text{The subscript in the sum directly above just means, that x and y are binary strings of length k}
+    $$
+    \textbf{Induction step n = k + 1}
+    $$
+    H^{\otimes (k+1)} = (\frac{1}{\sqrt{2}}[(\ket{0}+\ket{1})\bra{0} + (\ket{0}-\ket{1})\bra{1}]) \otimes \frac{1}{\sqrt{2^k}}\sum_{x,y\in \{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}}
+    $$
+    $$
+    = (\frac{1}{\sqrt{2}}(\ket{0}\bra{0} + \ket{1}\bra{0} + \ket{0}\bra{1} - \ket{1}\bra{1}) \otimes H^{\otimes k}
+    $$
+    $$
+    = \frac{1}{\sqrt{2^1}}\sum_{x,y \in \{0, 1\}}{(-1)^{xy}\ket{x}\bra{y}} \otimes \frac{1}{\sqrt{2^k}}\sum_{x,y\in \{0,1\}^k}{(-1)^{xy}\ket{x}\bra{y}} \overset{*}{=}
+    $$
+    $$
+    \text{We compute } xy \text{ to determine the sign by performing the binary inner product} 
+    $$
+\begin{table}[H] 
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        xy & x & y \\ 
+        \hline
+        0 & 0 & 0 \\
+        0 & 0 & 1 \\
+        0 & 1 & 0 \\
+        1 & 1 & 1 \\
+        \hline
+    \end{tabular}
+    \caption{$xy \in \{0,1\}$}
+    \label{tab:binary_inner_product}
+\end{table}
+\begin{table}[H] 
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $xy = x_1y_1 + x_2y_2 \mod 2$ & $x=x_1x_2$ & $y=y_1y_2$ \\ 
+        \hline
+        0 & 00 & 00 \\ 0 & 00 & 01 \\ 0 & 00 & 10 \\ 0 & 00 & 11 \\ 
+        0 & 01 & 00 \\ 1 & 01 & 01 \\ 0 & 01 & 10 \\ 1 & 01 & 11 \\ 
+        0 & 10 & 00 \\ 0 & 10 & 01 \\ 1 & 10 & 10 \\ 1 & 10 & 11 \\ 
+        0 & 11 & 00 \\ 1 & 11 & 01 \\ 1 & 11 & 10 \\ 0 & 11 & 11 \\ 
+        \hline
+    \end{tabular}
+    \caption{Binary inner product mod 2 for $x, y \in \{0,1\}^2$}
+    \label{tab:binary_inner_product}
+\end{table}
+    \begin{equation}
+        \text{We can extend (2.43, 2.44) to } \sum_{i}{\ket{a_i}} \otimes \sum_{i}{\ket{b_i}} = \sum_{i}\sum_{j}{(\ket{a_i} \otimes \ket{b_i})}
+        \tag{1}
+    \end{equation}
+    $$
+    = \frac{1}{\sqrt{2^{k+1}}}\sum_{x',y'\in\{0,1\}}\sum_{x'',y''\in\{0,1\}^k}{((-1)^{x'y'}\ket{x'}\bra{y'}) \otimes ((-1)^{x''y''}\ket{x''}\bra{y''})}
+     \text{ from (1)}
+    $$
+    $$
+    = \frac{1}{\sqrt{2^{k+1}}}\sum_{x',y'\in\{0,1\}}\sum_{x'',y''\in\{0,1\}^k}{(-1)^{x'y'}(-1)^{x''y''}[(\ket{x'}\bra{y'}) \otimes (\ket{x''}\bra{y''})]}
+     \text{ from (2.42)} \overset{**}{=}
+    $$
+    $$
+    \text{We want to perform the change of variables where } x \text{ is } (x', x''), \text{ where } x' \text{ is 1 bit and } x'' \text{ is k bit long}   
+    $$
+    $$
+    \{0,1\} \times \{0,1\}^k = \{(x, y) \mid x \in \{0,1\}, y \in \{0,1\}^k\} = \{(0, y) \mid y \in \{0,1\}^k\} \cup \{(1, y) \mid y \in \{0,1\}^k\} = \{0,1\}^{k+1}
+    $$
+    $$
+    \text{So, Considering } (-1)^{x'y'}(-1)^{x''y''} \text { we expand the definition of the binary inner product and have: } 
+    $$
+    $$
+    (-1)^{x'y'}(-1)^{\sum_{i = 1}^{k}{x_i}} = 
+    $$
+
+
 \end{framed}
 
 \bigskip
