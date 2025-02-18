@@ -11,7 +11,7 @@
 
 \title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang}
 \author{Vasilii Nikonov}
-\date{February 2025}
+\date{San Diego, CA February 2025}
 
 \begin{document}
 
@@ -553,8 +553,12 @@
     \noindent \textbf{Exercise 2.40: (Commutation relations for the Pauli matrices)}
     
     \medskip
-    
-    
+    \begin{enumerate}
+        \item $[X, Y] = XY - YX = \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}-\begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix}i & 0 \\ 0 & -i \end{bmatrix}-\begin{bmatrix}-i & 0 \\ 0 & i \end{bmatrix}= \begin{bmatrix}2i & 0 \\ 0 & -2i \end{bmatrix} = 2i\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = 2iZ$
+        \item $[Y, Z] = YZ - ZY = \begin{bmatrix}0 & -i \\ i & 0 \end{bmatrix}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} - \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}\begin{bmatrix}0 & -i \\ i & 0 \end{bmatrix} = \begin{bmatrix}0 & i \\ i & 0\end{bmatrix} - \begin{bmatrix}0 & -i \\ -i & 0\end{bmatrix} = \begin{bmatrix}0 & 2i \\ 2i & 0\end{bmatrix} = 2i\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} = 2iX$
+        \item $[Z, X] = ZX - XZ = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} - \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = \begin{bmatrix}0 & 1 \\ -1 & 0\end{bmatrix} - \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}0 & 2 \\ -2 & 0\end{bmatrix} = 2i\begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} = 2iY$
+    \end{enumerate}
+    Note, that $\epsilon_{jkl}$ in (2.74) is Levi-Civita symbol.
 \end{framed}
 
 \bigskip
@@ -563,7 +567,16 @@
     \noindent \textbf{Exercise 2.41: (Anti-commutation relations for the Pauli matrices)}
     
     \medskip
-    
+    \begin{enumerate}
+        \item $\{\sigma_1, \sigma_2\} = XY + YX = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} + \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}i & 0 \\ 0 & -i\end{bmatrix} + \begin{bmatrix}-i & 0 \\ 0 & i\end{bmatrix} = \begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix} = 0$
+        \item $\{\sigma_2, \sigma_3\} = YZ + ZY = \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} + \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} = \begin{bmatrix}0 & -i \\ -i & 0\end{bmatrix} + \begin{bmatrix}0 & i \\ i & 0\end{bmatrix} = \begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix} = 0$
+        \item $\{\sigma_3, \sigma_1\} = ZX + XZ = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = \begin{bmatrix}0 & 1 \\ -1 & 0\end{bmatrix} + \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix} = 0$
+        \item $\sigma_1^2  = XX= \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} = I$
+        \item $\sigma_2^2  = YY= \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} = I$
+        \item $\sigma_3^2  = ZZ= \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} = I$
+
+
+    \end{enumerate}
     
 \end{framed}
 
@@ -588,7 +601,39 @@
     \noindent \textbf{Exercise 2.43}
     
     \medskip
-    
+    \begin{equation*}
+        \text{Note, that Kronicker delta is defined as } \delta_{jk} =
+        \begin{cases}
+            0, & \text{if } j \neq k, \\
+            1, & \text{if } j = k.
+        \end{cases}
+    \end{equation*}
+    \begin{equation*}
+        \text{1. Consider the case } j\neq k \text{, then from (2.74, 2.75) } [\sigma_j, \sigma_k] + \{\sigma_j, \sigma_k \} = 2i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l + 0
+    \end{equation*}
+    \begin{equation*}
+        \text{Expanding the commutator and anti-commutator using their definitions we get: }
+    \end{equation*}
+    \begin{equation*}
+        \sigma_j\sigma_k - \sigma_k\sigma_j + \sigma_j\sigma_k + \sigma_k\sigma_j = 2i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l \implies 2\sigma_j\sigma_k = 2i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l \implies
+        \sigma_j\sigma_k = i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l
+    \end{equation*}
+    \begin{equation*}
+        \delta_{jk} = 0 \text{ as } j \neq k \implies \delta_{jk}I = 0 \implies \sigma_j\sigma_k = \delta_{jk}I + i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l
+    \end{equation*}
+    \begin{equation*}
+        \text{2. Now consider the case } j = k \implies \delta_{jk} = 1 \text{ and from (2.76) } \sigma_{jk}\sigma_{jk} = I \implies \sigma_{jk} = \delta_{jk}I.
+    \end{equation*}
+    \begin{equation*}
+        \text{Consider }\sigma_j\sigma_k = 2i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_l = 2i(\epsilon_{jk1}\sigma_1+\epsilon_{jk2}\sigma_2+\epsilon_{jk2}\sigma_3z) = 2i(0) = 0
+    \end{equation*}
+    \begin{equation*}
+        \text{ because in all the cases } \epsilon \text{ would have a repeating index, as } j = k.
+    \end{equation*}
+    \begin{equation*}
+        \text{ We have established, that } \sigma_{jk} = \delta_{jk}I + \sum_{l=1}^3{\epsilon_{jkl}\sigma_l} \text{ } \forall j,k
+    \end{equation*}
+
     
 \end{framed}
 
@@ -699,8 +744,13 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \noindent \textbf{Exercise 2.51}
     
     \medskip
-    
-    
+    $$
+    \text{Consider } HH^{\dagger} = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}=\frac{1}{2}\begin{bmatrix}2 & 0 \\ 0 & 2\end{bmatrix}=I
+    $$
+    $$
+    \text{Consider }H^{\dagger}H = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}=\frac{1}{2}\begin{bmatrix}2 & 0 \\ 0 & 2\end{bmatrix}=I
+    $$
+    Thus H is indeed unitary.
 \end{framed}
 
 \bigskip
