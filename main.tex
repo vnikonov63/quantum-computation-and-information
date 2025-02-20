@@ -557,7 +557,15 @@ $$
     \noindent \textbf{Exercise 2.30}
     
     \medskip
-    
+    $$
+    \text{Consider Hermitian }A, B \text{ s.t } A^{\dagger}=A, B^{\dagger} = B. \text{ Now form } (A \otimes B)^{\dagger} = A^{\dagger} \otimes B^{\dagger} \text{ from (2.53)} = A \otimes B
+    $$
+    $$
+    \text{Thus we have established, that the tensor product of two Hermitian matrices is Hermitian,}
+    $$
+    $$
+    \text{as } (A \otimes B)^{\dagger} = A \otimes B
+    $$
     
 \end{framed}
 
@@ -568,7 +576,13 @@ $$
     
     \medskip
     
-    
+    $$
+    \text{From page 71 a positive operator A is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in \mathbb{R}_{\geq 0}
+    $$  
+    $$
+    \text{Consider } A \otimes B, \text{ where } A,B \text{ are positive operators} \implies 
+    (\ket{v}, (A \otimes B)\ket{v}) = 
+    $$
 \end{framed}
 
 \bigskip
@@ -950,7 +964,7 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \medskip
 
     $$
-    H^2 = \frac{1}{2}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1*1 + 1*1 & 1*1 - 1*1 \\ 1 * 1 - 1 * 1 & 1 * 1 + (-1)*(-1)\end{bmatrix} = \frac{1}{2}\begin{bmatrix}2 & 0 \\ 0 & 2\end{bmatrix} = I
+    H^2 = \frac{1}{2}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1\times1 + 1\times1 & 1\times1 - 1\times1 \\ 1 \times 1 - 1 \times 1 & 1 \times 1 + (-1)\times(-1)\end{bmatrix} = \frac{1}{2}\begin{bmatrix}2 & 0 \\ 0 & 2\end{bmatrix} = I
     $$
     
 \end{framed}
@@ -1390,7 +1404,27 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 3.11: }
+    \noindent \textbf{Exercise 3.11}
+    
+    \medskip
+    We need to prove, that $\exists $ constants $c,n_0$ s.t $\forall n \geq n_0, \log n \leq cn^{k}, k > 0$. 
+
+    $$
+    \text{Consider } \lim_{n \rightarrow \infty}{\frac{\log n}{n^{k}}} \xrightarrow[]{L'Hopital's rule} \lim_{n \rightarrow \infty}{\frac{\frac{1}{n}}{kn^{k-1}}} = \lim_{n \rightarrow \infty}{\frac{1}{kn^{k}}} = 0 \implies \frac{\log{n}}{n^k} \leq 1 \text{ for some large } n.
+    $$
+    $$
+    \text{For } c = 1 \text{ and some large } n, \log{n} \leq n^{k}, \text{ as we are considering the non-negative functions}. 
+    $$
+    $$
+    \text{Thus } \log{n} \text{ is } O(n^{k}).
+    $$
+    
+\end{framed}
+
+\bigskip
+
+\begin{framed}
+    \noindent \textbf{Exercise 3.12: } $n^{\log{n}}$ \textbf{ is super-polynomial}
     
     \medskip
     
@@ -1400,17 +1434,7 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 3.12: }
-    
-    \medskip
-    
-    
-\end{framed}
-
-\bigskip
-
-\begin{framed}
-    \noindent \textbf{Exercise 3.13: }
+    \noindent \textbf{Exercise 3.13: } $n^{\log{n}}$ \textbf{ is sub-exponential}
     
     \medskip
     

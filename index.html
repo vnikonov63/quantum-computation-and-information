@@ -669,9 +669,22 @@ trivially.}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.30</strong></p>
+<p><span class="math display">\[\text{Consider Hermitian }A, B \text{
+s.t } A^{\dagger}=A, B^{\dagger} = B. \text{ Now form } (A \otimes
+B)^{\dagger} = A^{\dagger} \otimes B^{\dagger} \text{ from (2.53)} = A
+\otimes B\]</span> <span class="math display">\[\text{Thus we have
+established, that the tensor product of two Hermitian matrices is
+Hermitian,}\]</span> <span class="math display">\[\text{as } (A \otimes
+B)^{\dagger} = A \otimes B\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.31</strong></p>
+<p><span class="math display">\[\text{From page 71 a positive operator A
+is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in
+\mathbb{R}_{\geq 0}\]</span> <span class="math display">\[\text{Consider
+} A \otimes B, \text{ where } A,B \text{ are positive operators}
+\implies
+    (\ket{v}, (A \otimes B)\ket{v}) =\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.32</strong></p>
@@ -1063,10 +1076,10 @@ class="math display">\[= (-i)[B, A] = -(i)(-[A,B]) \text{ from exercise
 <p><strong>Exercise 2.52</strong></p>
 <p><span class="math display">\[H^2 = \frac{1}{2}\begin{bmatrix}1 &amp;
 1\\ 1 &amp; -1\end{bmatrix}\begin{bmatrix}1 &amp; 1\\ 1 &amp;
--1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1*1 + 1*1 &amp; 1*1 - 1*1
-\\ 1 * 1 - 1 * 1 &amp; 1 * 1 + (-1)*(-1)\end{bmatrix} =
-\frac{1}{2}\begin{bmatrix}2 &amp; 0 \\ 0 &amp; 2\end{bmatrix} =
-I\]</span></p>
+-1\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1\times1 + 1\times1 &amp;
+1\times1 - 1\times1 \\ 1 \times 1 - 1 \times 1 &amp; 1 \times 1 +
+(-1)\times(-1)\end{bmatrix} = \frac{1}{2}\begin{bmatrix}2 &amp; 0 \\ 0
+&amp; 2\end{bmatrix} = I\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.53</strong></p>
@@ -1207,13 +1220,30 @@ string</strong></p>
 <p><strong>Exercise 3.10:</strong></p>
 </div>
 <div class="framed">
-<p><strong>Exercise 3.11:</strong></p>
+<p><strong>Exercise 3.11</strong></p>
+<p>We need to prove, that <span class="math inline">\(\exists\)</span>
+constants <span class="math inline">\(c,n_0\)</span> s.t <span
+class="math inline">\(\forall n \geq n_0, \log n \leq cn^{k}, k &gt;
+0\)</span>.</p>
+<p><span class="math display">\[\text{Consider } \lim_{n \rightarrow
+\infty}{\frac{\log n}{n^{k}}} \xrightarrow[]{L&#39;Hopital&#39;s rule}
+\lim_{n \rightarrow \infty}{\frac{\frac{1}{n}}{kn^{k-1}}} = \lim_{n
+\rightarrow \infty}{\frac{1}{kn^{k}}} = 0 \implies \frac{\log{n}}{n^k}
+\leq 1 \text{ for some large } n.\]</span> <span
+class="math display">\[\text{For } c = 1 \text{ and some large } n,
+\log{n} \leq n^{k}, \text{ as we are considering the non-negative
+functions}.\]</span> <span class="math display">\[\text{Thus } \log{n}
+\text{ is } O(n^{k}).\]</span></p>
 </div>
 <div class="framed">
-<p><strong>Exercise 3.12:</strong></p>
+<p><strong>Exercise 3.12:</strong> <span
+class="math inline">\(n^{\log{n}}\)</span> <strong>is
+super-polynomial</strong></p>
 </div>
 <div class="framed">
-<p><strong>Exercise 3.13:</strong></p>
+<p><strong>Exercise 3.13:</strong> <span
+class="math inline">\(n^{\log{n}}\)</span> <strong>is
+sub-exponential</strong></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.14:</strong></p>
