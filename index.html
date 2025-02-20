@@ -1193,6 +1193,30 @@ to computer science</h2>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.2: Turing numbers</strong></p>
+<p>A Turing Machine is just a seven-tuple <span
+class="math inline">\((Q, \Sigma, \Gamma, \delta, q_0, a_{accept},
+a_{reject})\)</span>, where:</p>
+<ul>
+<li><p><span class="math inline">\(Q\)</span> is a set of
+States</p></li>
+<li><p><span class="math inline">\(\Sigma\)</span> is the input
+alphabet</p></li>
+<li><p><span class="math inline">\(\Gamma\)</span> is the tape alphabet,
+<span class="math inline">\(\square \in \Gamma, \Sigma \subseteq
+\Gamma\)</span></p></li>
+<li><p><span class="math inline">\(\delta: Q \times \Gamma \rightarrow Q
+\times \Gamma \times \{L,R\}\)</span> is the transition
+function</p></li>
+<li><p><span class="math inline">\(q_0 \in Q\)</span> is the accept
+state</p></li>
+<li><p><span class="math inline">\(a_{accept} \in Q\)</span> is the
+accept state</p></li>
+<li><p><span class="math inline">\(q_{recect} \in Q\)</span> is the
+reject state <span class="math inline">\(q_{reject} \neq
+q_{accept}\)</span></p></li>
+</ul>
+<p>A more detailed explanation of the definition you can find in
+"Introduction to Theory of Computation" by Michael Sipser, so:</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.3: Turing machine to reverse a bit
@@ -1200,6 +1224,9 @@ string</strong></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.4: Turing machine to add modulo 2</strong></p>
+<div class="center">
+<p><img src="images/3.4TM.jpg" style="width:110.0%" alt="image" /></p>
+</div>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.5: Halting problem with no inputs</strong></p>

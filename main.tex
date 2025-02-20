@@ -8,6 +8,8 @@
 \usepackage{enumitem}     
 \usepackage{braket}
 \usepackage{wasysym}
+\usepackage{graphicx} 
+\usepackage{caption}
 \usepackage[margin=1in]{geometry}  
 
 
@@ -1317,8 +1319,17 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \noindent \textbf{Exercise 3.2: Turing numbers}
     
     \medskip
-    
-    
+    A Turing Machine is just a seven-tuple $(Q, \Sigma, \Gamma, \delta, q_0, a_{accept}, a_{reject})$, where:
+    \begin{itemize}
+        \item $Q$ is a set of States
+        \item $\Sigma$ is the input alphabet 
+        \item $\Gamma$ is the tape alphabet, $\square \in \Gamma, \Sigma \subseteq \Gamma$
+        \item $\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \{L,R\}$ is the transition function
+        \item  $q_0 \in Q$ is the accept state
+        \item $a_{accept} \in Q$ is the accept state
+        \item $q_{recect} \in Q$ is the reject state $q_{reject} \neq q_{accept}$
+    \end{itemize}
+A more detailed explanation of the definition you can find in "Introduction to Theory of Computation" by Michael Sipser, so:
 \end{framed}
 
 \bigskip
@@ -1337,8 +1348,10 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \noindent \textbf{Exercise 3.4: Turing machine to add modulo 2}
     
     \medskip
-    
-    
+    \begin{center}
+        \includegraphics[width=1.1\textwidth]{images/3.4TM.jpg}
+        \captionof{figure}{Single-Tape TM}
+    \end{center}
 \end{framed}
 
 \bigskip
