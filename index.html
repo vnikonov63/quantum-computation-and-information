@@ -240,7 +240,7 @@ style="background-color: red!30"><strong>22</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>23</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>24</strong></span></td>
+style="background-color: yellow!30"><strong>24</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>25</strong></span></td>
 </tr>
@@ -274,7 +274,7 @@ style="background-color: green!30"><strong>36</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: yellow!30"><strong>37</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>38</strong></span></td>
+style="background-color: green!30"><strong>38</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>39</strong></span></td>
 <td style="text-align: center;"><span
@@ -310,7 +310,7 @@ style="background-color: green!30"><strong>51</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>52</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>53</strong></span></td>
+style="background-color: yellow!30"><strong>53</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>54</strong></span></td>
 <td style="text-align: center;"><span
@@ -657,6 +657,22 @@ class="math display">\[\text{a single sum
 </div>
 <div class="framed">
 <p><strong>Exercise 2.18</strong></p>
+<p><span class="math display">\[\text{For Unitary } U, \text{ following
+holds for its eigenpairs: } U\ket{v} = \lambda \ket{v} \implies
+\|U\ket{v}\|_2 = \| \lambda \ket{v}\|_2\]</span> <span
+class="math display">\[\text{Say } \ket{\psi} = U\ket{v} \implies
+\bra{\psi} = \ket{\psi}^{\dagger} = \ket{v}^{\dagger}U^{\dagger} =
+\bra{\psi}U^{\dagger}\]</span> <span class="math display">\[\text{From }
+(2.16) \text{ we know, that } \|U\ket{v}\|_2 = \|\ket{\psi}\|_2 =
+\sqrt{\bra{\psi}\ket{\psi}} = \sqrt{\bra{v}U^{\dagger}U\ket{v}} =
+\sqrt{\bra{v}\ket{v}} = \|\ket{v}\|_2\]</span> <span
+class="math display">\[\text{Thus unitary transformations preserve the
+inner product and, therefore, the Euclidean      norm of
+vectors}.\]</span> <span class="math display">\[\text{We can rewrite }
+(1) \text{ as } \|\ket{v}\|_2 = \| \lambda \ket{v} \|_2 \implies |
+\lambda | = 1. \text{ It is a complex number on unit circle}.\]</span>
+<span class="math display">\[\lambda = \cos(\theta) + i \sin(\theta) =
+e^{i \theta} \text{ from Eulers Formula}.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.19: (Pauli matrices: Hermitian and
@@ -727,6 +743,25 @@ Hermitian<br />
 <div class="framed">
 <p><strong>Exercise 2.24: (Hermiticity of positive
 operators)</strong></p>
+<p><span class="math display">\[\forall A, A = \frac{A}{2} + \frac{A}{2}
+= \frac{A}{2} + \frac{A}{2} + \frac{A^{\dagger}}{2} -
+\frac{A^{\dagger}}{2} = \frac{A + A^{\dagger}}{2} + \frac{A
+-A^{\dagger}}{2} = \frac{A + A^{\dagger}}{2} + i\frac{A
+-A^{\dagger}}{2i}.\]</span> <span class="math display">\[\text{Call } B
+= \frac{A + A^{\dagger}}{2} , C + \frac{A -A^{\dagger}}{2i} \implies A =
+B + iC.\]</span> <span class="math display">\[\text{Consider }
+B^{\dagger} = (\frac{A + A^{\dagger}}{2})^{\dagger} = (\frac{A^{\dagger}
++ (A^{\dagger})^{\dagger}}{2}) = (\frac{A^{\dagger} + A}{2}) = B
+\implies B \text{ is Hermitian}\]</span> <span class="math display">\[A
+\text{ is positive } \implies (\ket{v}, A\ket{v}) \in \mathbb{R}_{\geq
+0} , \forall\ket{v}. \text{ Rewrite as } (\ket{v}, B\ket{v}) +
+i(\ket{v}, C\ket{v})\]</span> <span class="math display">\[\text{as
+inner product is linear in the second argument from (2.13)}\]</span>
+<span class="math display">\[(\ket{v}, C\ket{v}) = 0 \text{ as for any }
+\ket{v} \text{ quantity} (\ket{v}, A\ket{v}) \text{ is real}.\]</span>
+<span class="math display">\[\text{We have } (\ket{v}, A\ket{v}) =
+(\ket{v}, B\ket{v}) \implies (\ket{v}, (A-B)\ket{v}) = 0 \text{ from }
+(2.13)\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.25</strong></p>
@@ -1192,6 +1227,14 @@ class="math display">\[= \sum_{j=1}^{n}(BA)_{jj} =
 </div>
 <div class="framed">
 <p><strong>Exercise 2.38: (Linearity of the trace)</strong></p>
+<p><span class="math display">\[\operatorname{tr}(A + B) =
+\sum_{i=1}^{n}{(A + B)_{ii}} = \sum_{i=1}^{n}A_{ii} +
+\sum_{i=1}^{n}B_{ii} = \operatorname{tr}(A) + \operatorname{tr}(B)
+\text{, as matrix addition is entry-wise}.\]</span> <span
+class="math display">\[\text{For } z \in \mathbb{C} \text{ consider }
+\operatorname{tr}(zA) =
+    \sum_{i=1}^{n}{(zA)_{ii}} = \sum_{i=1}^{n}{zA_{ii}} =
+z\sum_{i=1}^{n}{A_{ii}} = z\operatorname{tr}(A)\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.39: (The Hilbert–Schmidt inner product on
@@ -1378,6 +1421,10 @@ class="math display">\[= (-i)[B, A] = -(i)(-[A,B]) \text{ from exercise
 </div>
 <div class="framed">
 <p><strong>Exercise 2.53</strong></p>
+<p><span class="math display">\[\text{Consider characteristic question }
+(\frac{1}{\sqrt{2}} - \lambda)(-\frac{1}{\sqrt{2}} - \lambda) -
+\frac{1}{2} = 0 \implies \lambda^2=1 \implies\lambda = \pm
+1.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.54</strong></p>
@@ -1691,7 +1738,7 @@ class="math display">\[\begin{aligned}
 <div class="framed">
 <p><strong>Exercise 3.7: Halting oracle</strong></p>
 </div>
-<blockquote>
+<div class="framed">
 <p><strong>Exercise 3.8: Universality of NAND</strong></p>
 <p>Note: here I use Sheffer stroke <span
 class="math inline">\(\uparrow\)</span> notation for NAND</p>
@@ -1706,16 +1753,7 @@ B) \uparrow (A \uparrow B)\\
         0 &amp; 1 &amp; 1 &amp; 0 &amp; 0\\
         1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
         1 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
-        \end{array}\]</span></p>
-<figure>
-<div class="circuitikz">
-<p>(NAND1) at (0,0) ; (NAND1.in 1) node[left] <span>A</span>; (NAND1.in
-2) node[left] <span>B</span>; (NAND1.out) – ++(1,0) coordinate (midOut);
-(NAND2) at (3,0) ; (midOut) |- (NAND2.in 1); (midOut) |- (NAND2.in 2);
-(NAND2.out) – ++(1,0) node[right] <span>A AND B</span>;</p>
-</div>
-<figcaption>An AND gate using two NAND gates.</figcaption>
-</figure></li>
+        \end{array}\]</span></p></li>
 <li><p><strong>NOT</strong> <span class="math inline">\(\lnot A = A
 \uparrow A\)</span> <span
 class="math display">\[\begin{array}{c|c|c|c|c|c}
@@ -1744,7 +1782,7 @@ B &amp;(A \uparrow A) \uparrow (B \uparrow B) &amp; A \lor B \\
 <li><p><span class="math inline">\(A \oplus B = (A \land \lnot B) \lor
 (\lnot A \land B)\)</span>.</p></li>
 </ul>
-</blockquote>
+</div>
 <div class="framed">
 <p><strong>Exercise 3.9:</strong></p>
 </div>
@@ -1790,7 +1828,7 @@ n^{\log{n}} \leq cn^{k}, \forall n &gt; n_0 \implies \ln{n^{\log{n}}}
 \ln{c}.\]</span> <span class="math display">\[\text{ But, as } n
 \rightarrow \infty
     \text{ the left side tends to infinity, and it cannot be less, than
-some constant}\]</span> <span class="math display">\[\text{,thus we have
+some constant.}\]</span> <span class="math display">\[\text{Thus we have
 a contradiction, and out initial statement is false, thus } n^{\log{n}}
 \text{ is never } O(n^k).\]</span></p>
 </div>
