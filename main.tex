@@ -12,11 +12,14 @@
 \usepackage{caption}
 \usepackage[margin=1in]{geometry}  
 \usepackage[table]{xcolor}
-\usepackage{booktabs} 
+\usepackage{booktabs}
+\usepackage[american]{circuitikz}
 
-\newcommand{\solved}[1]{\cellcolor{green!30}\textbf{#1}}
-\newcommand{\inProgress}[1]{\cellcolor{yellow!30}\textbf{#1}}
-\newcommand{\notStarted}[1]{\cellcolor{red!30}\textbf{#1}}
+\ctikzset{logic ports=american}
+
+\newcommand{\solved}[1]{\colorbox{green!30}{\textbf{#1}}}
+\newcommand{\inProgress}[1]{\colorbox{yellow!30}{\textbf{#1}}}
+\newcommand{\notStarted}[1]{\colorbox{red!30}{\textbf{#1}}}
 
 \title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang}
 \author{Vasilii Nikonov}
@@ -31,7 +34,6 @@
 \begin{center}
 \begin{tabular}{*{5}{c}}
 \toprule
-% Row 1: Mark #1 (solved), #2 (in progress), #3 (not started), #4, #5
 \solved{1} & \solved{2} & \solved{3} & \notStarted{4} & \notStarted{5} \\
 \solved{6} & \solved{7} & \notStarted{8} & \notStarted{9} & \notStarted{10} \\
 \inProgress{11} & \notStarted{12} & \solved{13} & \solved{14} & \solved{15} \\
@@ -48,12 +50,12 @@
 \notStarted{66} & \notStarted{67} & \notStarted{68} & \notStarted{69} & \notStarted{70} \\
 \notStarted{71} & \notStarted{72} & \notStarted{73} & \notStarted{74} & \notStarted{75} \\
 \notStarted{76} & \notStarted{77} & \notStarted{78} & \notStarted{79} & \notStarted{80} \\
-\notStarted{81} & \notStarted{82} & \notStarted{83} & \notStarted{84} & \notStarted{85} \\
+\notStarted{81} & \notStarted{82} & \notStarted{EOC1} & \notStarted{EOC2} & \notStarted{EOC3} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\begin{framed} 
+\begin{framed}
     \noindent \textbf{Exercise 2.1: (Linear Dependence Example)}
     
     \medskip
@@ -101,7 +103,7 @@
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.3: (Matrix representation for operator products)}
 
     \medskip
@@ -127,28 +129,28 @@
     $$
     BA_{ki} = \sum_j{B_{kj}A_{ji}} \text{ from (2)}
     $$
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.4: (Matrix representation for identity)}
 
     \medskip
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.5}
 
     \medskip
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.6}
     
     \medskip
@@ -170,51 +172,52 @@
     = \sum_{i}{\lambda_i^*(\ket{w_i}, \ket{v})} \text{ from (2.13 (2))}
     $$
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.7}
-    \medskip
-    $(\ket{v}, \ket{w}) =  ((1, -1), (1, 1)) = \begin{bmatrix} 1^* -1^* \end{bmatrix} \begin{bmatrix} 1^* \\ 1^* \end{bmatrix} = \begin{bmatrix} 1 -1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = 1 - 1 = 0 \text{ precisely following (2.14) we establish, that }\ket{w} \text{ and } \ket{v} \text{ are orthogonal}$
-    Their normalized forms are $\frac{v}{\| \ket{v \|}} = (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}})$ and $\frac{w}{\| \ket{w \|}} = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$, as both have a norm of $\sqrt{2}$.
     
-\end{framed}
+    \medskip
+    
+    $(\ket{v}, \ket{w}) =  ((1, -1), (1, 1)) = \begin{bmatrix} 1^* -1^* \end{bmatrix} \begin{bmatrix} 1^* \\ 1^* \end{bmatrix} = \begin{bmatrix} 1 -1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = 1 - 1 = 0$. Precisely following (2.14) we establish, that $\ket{w} \text{ and } \ket{v} \text{ are orthogonal}$. Their normalized forms are $\frac{v}{\| \ket{v \|}} = (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}})$ and $\frac{w}{\| \ket{w \|}} = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$, as both have a norm of $\sqrt{2}$.
+    
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.8}
     
     \medskip
     
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.9: (Pauli operators and the outer product)}
     
     \medskip
     
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.10}
     
     \medskip
     
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 2.11: (Eigendecomposition of the Pauli matrices)}
     
     \medskip
@@ -229,15 +232,15 @@
             \item $\lambda = 1$, Solving $Y\ket{v} = i\ket{v} \implies \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix} = \begin{bmatrix}v_1 \\ v_2\end{bmatrix} \implies \begin{bmatrix}-iv_2 \\ iv_1\end{bmatrix} = \begin{bmatrix}v_1 \\ v_2\end{bmatrix}$
             \item $\lambda = -1$, Solving $Y\ket{v} = -i\ket{v} \implies \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix} = \begin{bmatrix}-v_1 \\ -v_2\end{bmatrix} \implies  \begin{bmatrix}-iv_2 \\ iv_1\end{bmatrix}= \begin{bmatrix}-v_1 \\ -v_2\end{bmatrix}$
         \end{enumerate}
-        \item Z = $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & 1 \\ 1 & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm1$
+        \item Z = $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \implies$ characteristic equation is $\det(\begin{bmatrix} 1 - \lambda & 0 \\ 0 & -1 - \lambda \end{bmatrix}) = \lambda^2 - 1$, and the solution is $\lambda = \pm1$.
         \begin{enumerate}
-            \item 
+            \item $\lambda = 1$, Solving $Z\ket{v} = \ket{v} \implies \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \implies \begin{bmatrix} v_1 \\ -v_2 \end{bmatrix} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}.$ Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$
+
+            \item $\lambda = -1$, Solving $Z\ket{v} = -\ket{v} \implies \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies \begin{bmatrix} v_1 \\ -v_2 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix}.$ Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$
         \end{enumerate}
     \end{enumerate}
-    
-    
-    
-\end{framed}
+
+\end{quotation}
 
 \bigskip
 
@@ -1363,6 +1366,19 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
 
 \subsection*{Chapter 3: Introduction to computer science}
 
+\begin{center}
+\begin{tabular}{*{7}{c}}
+\toprule
+\notStarted{1} & \solved{2} & \notStarted{3} & \inProgress{4} & \notStarted{5} & \notStarted{6} & \notStarted{7} \\
+\notStarted{8} & \notStarted{9} & \notStarted{10} & \solved{11} & \solved{12} & \notStarted{13} & \notStarted{14} \\
+\notStarted{15} & \notStarted{16} & \notStarted{17} & \notStarted{18} & \notStarted{19} & \notStarted{20} & \notStarted{21} \\
+\notStarted{22} & \notStarted{23} & \notStarted{24} & \notStarted{25} & \notStarted{26} & \notStarted{27} & \notStarted{28} \\
+\notStarted{29} & \notStarted{30} & \notStarted{31} & \notStarted{32} & \notStarted{EOC1} & \notStarted{EOC2} & \notStarted{EOC3} \\
+\notStarted{EOC4} & \notStarted{EOC5} & \notStarted{EOC6} & \notStarted{EOC7} & \notStarted{EOC8} & \notStarted{EOC9} & \notStarted{EOC10} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \bigskip
 
 \begin{framed}
@@ -1404,15 +1420,41 @@ A more detailed explanation of the definition you can find in "Introduction to T
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 3.4: Turing machine to add modulo 2}
-    
+
     \medskip
+
+    Given two input strings separated by a blank character, we traverse to the last character of the second string (we know this if it is a second blank we encounter, the first one being the separation between the input strings of bits). Based on the value of the last bit, we either transition to a last 1 (q5) state or a last 0 (q4) state. We now have to see what was the last bit in the first input string, so we traverse left, deleting every bit we encounter, not to leave a huge mess after us. Once we encounter the last bit within the first input string, we decide accordingly on what to write on the tape (if we already have 1 from the second input string and encounter 0 now, we write 1, and if we encounter 1, we write 0). We can do addition modulo 2 based on these last two bits.
+    
     \begin{center}
         \includegraphics[width=1.1\textwidth]{images/3.4TM.jpg}
         \captionof{figure}{Single-Tape TM}
     \end{center}
-\end{framed}
+
+    Let's carefully trace what is happening if we want to add 7 and 9 modulo 2. Our tape initially looks like $\dots \square \square q_0111 \square 1001 \square \square \dots$ with the head on the very first digit if the first input string, the machine is in the position q0.
+    \begin{align*}
+        &\square\ \square\ q_0\ 1\ 1\ 1\ \square\ 1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ q_0\ 1\ 1\ \square\ 1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ q_0\ 1\ \square\ 1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ q_0\ \square\ 1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ q_1\ 1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ q_1\ 0\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ 0\ q_1\ 0\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ 0\ 0\ q_1\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ 0\ 0\ 1\ q_1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ 0\ 0\ q_6\ 1\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ 0\ q_5\ 0\ \square\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ 1\ q_5\ 0\ \square\ \square\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ \square\ q_5\ 1\ \square\ \square\ \square\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ 1\ q_5\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+        &\square\ \square\ 1\ 1\ q_8\ 1\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+        &\square\ \square\ 1\ q_9\ 1\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+        &\square\ \square\ q_9\ 1\  \square\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+        &\square\ q_9\ \square\  \square\ \square\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+        &q_{10}\square\ \ \square\  \square\ \square\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
+\end{align*}
+\end{quotation}
 
 \bigskip
 
@@ -1446,13 +1488,64 @@ A more detailed explanation of the definition you can find in "Introduction to T
 
 \bigskip
 
-\begin{framed}
+\begin{quotation}
     \noindent \textbf{Exercise 3.8: Universality of NAND}
     
     \medskip
+    Note: here I use Sheffer stroke $\uparrow$ notation for NAND
+    \begin{itemize}
+        \item \textbf{AND}
+        $A \land B = (A \uparrow B) \uparrow (A \uparrow B)$
+        $$
+        \begin{array}{c|c|c|c|c|c}
+        A & B & A \uparrow B & A \land B & (A \uparrow B) \uparrow (A \uparrow B)\\
+        \hline
+        0 & 0 & 1 & 0 & 0\\
+        0 & 1 & 1 & 0 & 0\\
+        1 & 0 & 1 & 0 & 0\\
+        1 & 1 & 0 & 1 & 1\\
+        \end{array}
+        $$
+        \begin{figure}[h]
+            \centering
+            \begin{circuitikz}[scale=1.0, transform shape]
+                \node[american nand port, number inputs=2] (NAND1) at (0,0) {};
+                \draw (NAND1.in 1) node[left] {A};
+                \draw (NAND1.in 2) node[left] {B};
+                \draw (NAND1.out) -- ++(1,0) coordinate (midOut);
+                \node[american nand port, number inputs=2] (NAND2) at (3,0) {};
+                \draw (midOut) |- (NAND2.in 1);
+                \draw (midOut) |- (NAND2.in 2);
+                \draw (NAND2.out) -- ++(1,0) node[right] {A AND B};
+            \end{circuitikz}
+            \caption{An AND gate using two NAND gates.}
+        \end{figure}
+        \item \textbf{NOT} $\lnot A = A \uparrow A$
+        $$
+        \begin{array}{c|c|c|c|c|c}
+        A & \lnot A & A \uparrow A \\
+        \hline
+        0 & 1 & 1\\
+        1 & 0 & 0\\
+        \end{array}
+        $$
+        \item \textbf{Or} $A \lor B = \lnot(\lnot A \land \lnot B) = \lnot A \uparrow \lnot B = (A \uparrow A) \uparrow (B \uparrow B)$ from the De Morgan's Law.
+        $$
+        \begin{array}{c|c|c|c|c|c|c|c|c|c}
+        A & B & \lnot A & \lnot B & \lnot A \land \lnot B & \lnot(\lnot A \land \lnot B) & A \uparrow A & B \uparrow B &(A \uparrow A) \uparrow (B \uparrow B) & A \lor B \\
+        \hline
+        0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0\\
+        0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 1\\
+        1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1\\
+        1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1\\
+        \end{array}
+        $$
+
+        \item $A \oplus B = (A \land \lnot B) \lor (\lnot A \land B)$.
+    \end{itemize}
     
     
-\end{framed}
+\end{quotation}
 
 \bigskip
 
@@ -1724,6 +1817,20 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \end{framed}
 
 \subsection*{Chapter 4: Quantum circuits}
+
+\begin{center}
+\begin{tabular}{*{9}{c}}
+\toprule
+\notStarted{1} & \notStarted{2} & \notStarted{3} & \notStarted{4} & \notStarted{5} & \notStarted{6} & \notStarted{7} & \notStarted{8} & \notStarted{9} \\
+\notStarted{10} & \notStarted{11} & \notStarted{12} & \notStarted{13} & \notStarted{14} & \notStarted{15} & \notStarted{16} & \notStarted{17} & \notStarted{18} \\
+\notStarted{19} & \notStarted{20} & \notStarted{21} & \notStarted{22} & \notStarted{23} & \notStarted{24} & \notStarted{25} & \notStarted{26} & \notStarted{27} \\
+\notStarted{28} & \notStarted{29} & \notStarted{30} & \notStarted{31} & \notStarted{32} & \notStarted{33} & \notStarted{34} & \notStarted{35} & \notStarted{36} \\
+\notStarted{37} & \notStarted{38} & \notStarted{39} & \notStarted{40} & \notStarted{41} & \notStarted{42} & \notStarted{43} & \notStarted{44} & \notStarted{45} \\
+\notStarted{46} & \notStarted{47} & \notStarted{48} & \notStarted{49} & \notStarted{50} & \notStarted{51} & \notStarted{EOC1} & \notStarted{EOC2} & \notStarted{EOC3} \\
+\notStarted{EOC4} & \notStarted{EOC5} & \notStarted{EOC6} &  &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{center}
 
 
 \bigskip
