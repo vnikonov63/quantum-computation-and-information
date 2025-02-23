@@ -41,7 +41,7 @@
 \notStarted{21} & \notStarted{22} & \notStarted{23} & \notStarted{24} & \solved{25} \\
 \solved{26} & \solved{27} & \notStarted{28} & \solved{29} & \solved{30} \\
 \inProgress{31} & \notStarted{32} & \inProgress{33} & \notStarted{34} & \notStarted{35} \\
-\notStarted{36} & \notStarted{37} & \notStarted{38} & \notStarted{39} & \solved{40} \\
+\solved{36} & \inProgress{37} & \notStarted{38} & \notStarted{39} & \solved{40} \\
 \solved{41} & \solved{42} & \solved{43} & \solved{44} & \solved{45} \\
 \solved{46} & \solved{47} & \notStarted{48} & \notStarted{49} & \notStarted{50} \\
 \solved{51} & \solved{52} & \notStarted{53} & \notStarted{54} & \notStarted{55} \\
@@ -103,7 +103,7 @@
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.3: (Matrix representation for operator products)}
 
     \medskip
@@ -129,28 +129,28 @@
     $$
     BA_{ki} = \sum_j{B_{kj}A_{ji}} \text{ from (2)}
     $$
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.4: (Matrix representation for identity)}
 
     \medskip
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.5}
 
     \medskip
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.6}
     
     \medskip
@@ -172,52 +172,52 @@
     = \sum_{i}{\lambda_i^*(\ket{w_i}, \ket{v})} \text{ from (2.13 (2))}
     $$
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.7}
     
     \medskip
     
     $(\ket{v}, \ket{w}) =  ((1, -1), (1, 1)) = \begin{bmatrix} 1^* -1^* \end{bmatrix} \begin{bmatrix} 1^* \\ 1^* \end{bmatrix} = \begin{bmatrix} 1 -1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = 1 - 1 = 0$. Precisely following (2.14) we establish, that $\ket{w} \text{ and } \ket{v} \text{ are orthogonal}$. Their normalized forms are $\frac{v}{\| \ket{v \|}} = (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}})$ and $\frac{w}{\| \ket{w \|}} = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$, as both have a norm of $\sqrt{2}$.
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.8}
     
     \medskip
     
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.9: (Pauli operators and the outer product)}
     
     \medskip
     
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.10}
     
     \medskip
     
     
-\end{quotation}
+\end{framed}
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 2.11: (Eigendecomposition of the Pauli matrices)}
     
     \medskip
@@ -240,7 +240,7 @@
         \end{enumerate}
     \end{enumerate}
 
-\end{quotation}
+\end{framed}
 
 \bigskip
 
@@ -782,6 +782,11 @@ $$
     
     \medskip
     
+    \begin{itemize}
+        \item $X = \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} 0 + 0 = 0 \implies \operatorname{tr}(X) = 0  $.
+        \item $Y = \begin{bmatrix} 0 & -i \\ i & 0\end{bmatrix} 0 + 0 = 0 \implies \operatorname{tr}(Y) = 0  $.
+        \item $Z = \begin{bmatrix} 1 & 0 \\0 & -1\end{bmatrix} 1 - 1 = 0 \implies \operatorname{tr}(Z) = 0 $.
+    \end{itemize}
     
 \end{framed}
 
@@ -791,7 +796,19 @@ $$
     \noindent \textbf{Exercise 2.37: (Cyclic property of the trace)}
     
     \medskip
-    
+
+    $$
+    \operatorname{tr}(AB) = \sum_{i=1}^{n}{AB}_{ii} = \sum_{i=1}^{n}\sum_{j=1}^{n}A_{ij}B_{ji} \text{ from the definition of matrix multiplication}
+    $$
+    $$
+    = \sum_{i=1}^{n}\sum_{j=1}^{n}{B_{ji}A_{ij}} \text{, as } B_{ji} \text{ and } A_{ij} \text{ are elements of the matrix and thus commutative scalars}
+    $$
+    $$
+    = \sum_{j=1}^{n}\sum_{i=1}^{n}{B_{ji}A_{ij}} \textbf{ !!TODO!! ASK A QUESTION}
+    $$
+    $$
+    = \sum_{j=1}^{n}(BA)_{jj} = \operatorname{tr}(BA)
+    $$
     
 \end{framed}
 
@@ -1420,7 +1437,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 
 \bigskip
 
-\begin{quotation}
+\begin{framed}
     \noindent \textbf{Exercise 3.4: Turing machine to add modulo 2}
 
     \medskip
@@ -1454,7 +1471,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
         &\square\ q_9\ \square\  \square\ \square\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
         &q_{10}\square\ \ \square\  \square\ \square\ 0\ \square\ \square\ \square\ \square\ \square\ \square\ \square\ \\
 \end{align*}
-\end{quotation}
+\end{framed}
 
 \bigskip
 
