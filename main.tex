@@ -193,17 +193,19 @@
         \item X = $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & 1 \\ 1 & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm1$.
         \begin{enumerate}
             \item $\lambda = 1$, Solving $X\ket{v} = \ket{v} \implies \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}=\begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \implies \begin{bmatrix} v_2 \\ v_1 \end{bmatrix}=\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}$. Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$\\
-            \item $\lambda = -1$, Solving $X\ket{v} = -\ket{v} \implies \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}=\begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies \begin{bmatrix} v_2 \\ v_1 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix}$ Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+            \item $\lambda = -1$, Solving $X\ket{v} = -\ket{v} \implies \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2 \end{bmatrix}=\begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies \begin{bmatrix} v_2 \\ v_1 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix}$. Thus the eigenvector is any scalar multiple of $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
         \end{enumerate}
-        \item Y = $\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & -i \\ i & -\lambda \end{bmatrix}) = \lambda^2 + 1$ and the solution is $\lambda = \pm i$
+        \item Y = $\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & -i \\ i & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm 1$
         \begin{enumerate}
-            \item 
+            \item $\lambda = 1$, Solving $Y\ket{v} = i\ket{v} \implies \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix} = \begin{bmatrix}v_1 \\ v_2\end{bmatrix} \implies \begin{bmatrix}-iv_2 \\ iv_1\end{bmatrix} = \begin{bmatrix}v_1 \\ v_2\end{bmatrix}$
+            \item $\lambda = -1$, Solving $Y\ket{v} = -i\ket{v} \implies \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix} = \begin{bmatrix}-v_1 \\ -v_2\end{bmatrix} \implies  \begin{bmatrix}-iv_2 \\ iv_1\end{bmatrix}= \begin{bmatrix}-v_1 \\ -v_2\end{bmatrix}$
         \end{enumerate}
         \item Z = $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \implies $characteristic equation is $det(\begin{bmatrix} - \lambda & 1 \\ 1 & -\lambda \end{bmatrix}) = \lambda^2 - 1$ and the solution is $\lambda = \pm1$
         \begin{enumerate}
             \item 
         \end{enumerate}
     \end{enumerate}
+    
     
     
 \end{framed}
@@ -273,6 +275,15 @@
     \noindent \textbf{Exercise 2.16}
     
     \medskip
+    $$
+    \text{We can write out } P^2 \text{ explicitly using (2.35) } P^{2} = (\sum_{i=1}^{k}{\ket{i}\bra{i}})(\sum_{j=1}^{k}{\ket{j}\bra{j}}) = \sum_{i=1}^{k}\sum_{j=1}^{k}\ket{i}\bra{i}\ket{j}\bra{j}
+    $$
+    $$
+    \text{As we have orthonormality} \bra{i}\ket{j} = \delta_{ij} = \begin{cases}1 & i=j \\ 0 & i \neq j\end{cases} \text{ the above double sum colapses into}
+    $$
+    $$
+    \text{a single sum }\sum_{i=1}^{k}{\ket{i}\bra{i}} = P
+    $$
     
     
 \end{framed}
@@ -383,7 +394,7 @@
     \noindent \textbf{Exercise 2.25}
     
     \medskip
-    
+    Consider inner product $(\ket{v}, A^{\dagger}A\ket{v})$. Call $A\ket{v}$ to be $\ket{\psi}$, so we have $(\ket{v}, A^{\dagger}\ket{\psi}) = (A\ket{v}, \ket{\psi})$ from the definition of the Hermitian conjugate in (2.32), we get: $(\ket{\psi}, \ket{\psi}) \geq 0$ from the positivity property of inner product described on page 65.
     
 \end{framed}
 
@@ -603,6 +614,26 @@ $$
     \noindent \textbf{Exercise 2.33}
     
     \medskip
+
+    \textbf{Computing} $H^{\otimes 2}$
+    $$
+    H^{\otimes 2} = H \otimes H = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} \otimes \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} = \frac{1}{2}
+    \begin{bmatrix}
+    1 \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} &
+    1 \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} \\
+    1 \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} & 
+    -1 \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} \\
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        1 & -1 & 1 & -1 \\
+        1 & 1 & -1 & -1 \\
+        1 & -1 & -1 & 1
+    \end{bmatrix}
+    $$
+    $$
+    \text{Now using the formula } H^{\otimes 2} = \frac{1}{\sqrt{2^2}} \sum_{x,y \in \{0, 1\}^2}{(-1)^{xy}\ket{x}\bra{y}} = \sum_{x,y \in \{00, 01, 10, 11 \}}{(-1)^{xy}\ket{x}\bra{y}}
+    $$
     \textbf{Base case n = 1}
     $$
     \text{Substituting } \ket{1} \text{ with } \begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with } \begin{bmatrix}0 \\ 1\end{bmatrix} $$
@@ -1440,7 +1471,26 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 3.12: } $n^{\log{n}}$ \textbf{ is super-polynomial}
     
     \medskip
-    
+    We need to prove, that $\forall k, \exists c, n_0$, s.t $\forall n > n_0, n^{k} \leq cn^{\log{n}}$ Consider:
+    $$
+    \lim_{n \rightarrow \infty}{\frac{n^k}{n^{\log{n}}}} = \lim_{n \rightarrow \infty}{\frac{(e^{\ln{n}})^{k}}{(e^{\ln{n}})^{\log{n}}}} = \lim_{n \rightarrow \infty}{\frac{e^{k\ln{n}}}{e^{\log{n}\ln{n}}}} = \lim_{n \rightarrow \infty}{e^{k\ln{n} - \log{n}\ln{n}} = e^{-\infty} = 0}
+    $$
+    $$
+    \text{as } k \text{ is a fixed constant.} \text{ In conclusion } c = 1 \text{ and some large } n, n^{k} \leq n^{\log{n}} \implies n^{k} \text{ is } O(n^{\log{n}})
+    $$
+    $$
+    \text{Suppose for contradiction  } n^{\log{n}} \text{ is } O(n^k) \implies \exists c, n_0, \text{ s.t } n^{\log{n}} \leq cn^{k}, \forall n > n_0 \implies \ln{n^{\log{n}}} \leq \ln{cn^{k}}
+    $$
+    $$
+    \implies \log{n} \ln{n} \leq \ln{c} + k \ln{n} \implies \ln{n}(\log{n} - k) \leq \ln{c}.
+    $$
+    $$
+    \text{ But, as } n \rightarrow \infty 
+    \text{ the left side tends to infinity, and it cannot be less, than some constant}
+    $$
+    $$\text{,thus we have a contradiction, and out initial statement is false, thus } n^{\log{n}} \text{ is never } O(n^k).
+    $$
+
     
 \end{framed}
 

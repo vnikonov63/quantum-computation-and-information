@@ -346,17 +346,28 @@ class="math inline">\(X\ket{v} = -\ket{v} \implies \begin{bmatrix} 0
 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\begin{bmatrix} v_1 \\ v_2
 \end{bmatrix}=\begin{bmatrix} -v_1 \\ -v_2 \end{bmatrix} \implies
 \begin{bmatrix} v_2 \\ v_1 \end{bmatrix} = \begin{bmatrix} -v_1 \\ -v_2
-\end{bmatrix}\)</span> Thus the eigenvector is any scalar multiple of
+\end{bmatrix}\)</span>. Thus the eigenvector is any scalar multiple of
 <span class="math inline">\(\begin{bmatrix} 1 \\ -1
 \end{bmatrix}\)</span></p></li>
 </ol></li>
 <li><p>Y = <span class="math inline">\(\begin{bmatrix} 0 &amp; -i \\ i
 &amp; 0 \end{bmatrix} \implies\)</span>characteristic equation is <span
 class="math inline">\(det(\begin{bmatrix} - \lambda &amp; -i \\ i &amp;
--\lambda \end{bmatrix}) = \lambda^2 + 1\)</span> and the solution is
-<span class="math inline">\(\lambda = \pm i\)</span></p>
+-\lambda \end{bmatrix}) = \lambda^2 - 1\)</span> and the solution is
+<span class="math inline">\(\lambda = \pm 1\)</span></p>
 <ol>
-<li></li>
+<li><p><span class="math inline">\(\lambda = 1\)</span>, Solving <span
+class="math inline">\(Y\ket{v} = i\ket{v} \implies \begin{bmatrix}0
+&amp; -i \\ i &amp; 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix}
+= \begin{bmatrix}v_1 \\ v_2\end{bmatrix} \implies \begin{bmatrix}-iv_2
+\\ iv_1\end{bmatrix} = \begin{bmatrix}v_1 \\
+v_2\end{bmatrix}\)</span></p></li>
+<li><p><span class="math inline">\(\lambda = -1\)</span>, Solving <span
+class="math inline">\(Y\ket{v} = -i\ket{v} \implies \begin{bmatrix}0
+&amp; -i \\ i &amp; 0\end{bmatrix}\begin{bmatrix}v_1 \\ v_2\end{bmatrix}
+= \begin{bmatrix}-v_1 \\ -v_2\end{bmatrix}
+\implies  \begin{bmatrix}-iv_2 \\ iv_1\end{bmatrix}= \begin{bmatrix}-v_1
+\\ -v_2\end{bmatrix}\)</span></p></li>
 </ol></li>
 <li><p>Z = <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0
 &amp; -1 \end{bmatrix} \implies\)</span>characteristic equation is <span
@@ -405,6 +416,15 @@ A\)</span> from the definition of the transpose.</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.16</strong></p>
+<p><span class="math display">\[\text{We can write out } P^2 \text{
+explicitly using (2.35) } P^{2} =
+(\sum_{i=1}^{k}{\ket{i}\bra{i}})(\sum_{j=1}^{k}{\ket{j}\bra{j}}) =
+\sum_{i=1}^{k}\sum_{j=1}^{k}\ket{i}\bra{i}\ket{j}\bra{j}\]</span> <span
+class="math display">\[\text{As we have orthonormality} \bra{i}\ket{j} =
+\delta_{ij} = \begin{cases}1 &amp; i=j \\ 0 &amp; i \neq j\end{cases}
+\text{ the above double sum colapses into}\]</span> <span
+class="math display">\[\text{a single sum
+}\sum_{i=1}^{k}{\ket{i}\bra{i}} = P\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.17</strong></p>
@@ -484,6 +504,15 @@ operators)</strong></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.25</strong></p>
+<p>Consider inner product <span class="math inline">\((\ket{v},
+A^{\dagger}A\ket{v})\)</span>. Call <span
+class="math inline">\(A\ket{v}\)</span> to be <span
+class="math inline">\(\ket{\psi}\)</span>, so we have <span
+class="math inline">\((\ket{v}, A^{\dagger}\ket{\psi}) = (A\ket{v},
+\ket{\psi})\)</span> from the definition of the Hermitian conjugate in
+(2.32), we get: <span class="math inline">\((\ket{\psi}, \ket{\psi})
+\geq 0\)</span> from the positivity property of inner product described
+on page 65.</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.26</strong> <span
@@ -691,8 +720,27 @@ is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in
 </div>
 <div class="framed">
 <p><strong>Exercise 2.33</strong></p>
-<p><strong>Base case n = 1</strong> <span
-class="math display">\[\text{Substituting } \ket{1} \text{ with }
+<p><strong>Computing</strong> <span class="math inline">\(H^{\otimes
+2}\)</span> <span class="math display">\[H^{\otimes 2} = H \otimes H =
+\frac{1}{\sqrt{2}}\begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix}
+\otimes \frac{1}{\sqrt{2}}\begin{bmatrix}1 &amp; 1 \\ 1 &amp;
+-1\end{bmatrix} = \frac{1}{2}
+    \begin{bmatrix}
+    1 \begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix} &amp;
+    1 \begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix} \\
+    1 \begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix} &amp;
+    -1 \begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix} \\
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; 1 &amp; -1 &amp; -1 \\
+        1 &amp; -1 &amp; -1 &amp; 1
+    \end{bmatrix}\]</span> <span class="math display">\[\text{Now using
+the formula } H^{\otimes 2} = \frac{1}{\sqrt{2^2}} \sum_{x,y \in \{0,
+1\}^2}{(-1)^{xy}\ket{x}\bra{y}} = \sum_{x,y \in \{00, 01, 10, 11
+\}}{(-1)^{xy}\ket{x}\bra{y}}\]</span> <strong>Base case n = 1</strong>
+<span class="math display">\[\text{Substituting } \ket{1} \text{ with }
 \begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with }
 \begin{bmatrix}0 \\ 1\end{bmatrix}\]</span> <span
 class="math display">\[\text{ (2.54) becomes } H =
@@ -1266,6 +1314,28 @@ functions}.\]</span> <span class="math display">\[\text{Thus } \log{n}
 <p><strong>Exercise 3.12:</strong> <span
 class="math inline">\(n^{\log{n}}\)</span> <strong>is
 super-polynomial</strong></p>
+<p>We need to prove, that <span class="math inline">\(\forall k, \exists
+c, n_0\)</span>, s.t <span class="math inline">\(\forall n &gt; n_0,
+n^{k} \leq cn^{\log{n}}\)</span> Consider: <span
+class="math display">\[\lim_{n \rightarrow
+\infty}{\frac{n^k}{n^{\log{n}}}} = \lim_{n \rightarrow
+\infty}{\frac{(e^{\ln{n}})^{k}}{(e^{\ln{n}})^{\log{n}}}} = \lim_{n
+\rightarrow \infty}{\frac{e^{k\ln{n}}}{e^{\log{n}\ln{n}}}} = \lim_{n
+\rightarrow \infty}{e^{k\ln{n} - \log{n}\ln{n}} = e^{-\infty} =
+0}\]</span> <span class="math display">\[\text{as } k \text{ is a fixed
+constant.} \text{ In conclusion } c = 1 \text{ and some large } n, n^{k}
+\leq n^{\log{n}} \implies n^{k} \text{ is } O(n^{\log{n}})\]</span>
+<span class="math display">\[\text{Suppose for contradiction  }
+n^{\log{n}} \text{ is } O(n^k) \implies \exists c, n_0, \text{ s.t }
+n^{\log{n}} \leq cn^{k}, \forall n &gt; n_0 \implies \ln{n^{\log{n}}}
+\leq \ln{cn^{k}}\]</span> <span class="math display">\[\implies \log{n}
+\ln{n} \leq \ln{c} + k \ln{n} \implies \ln{n}(\log{n} - k) \leq
+\ln{c}.\]</span> <span class="math display">\[\text{ But, as } n
+\rightarrow \infty
+    \text{ the left side tends to infinity, and it cannot be less, than
+some constant}\]</span> <span class="math display">\[\text{,thus we have
+a contradiction, and out initial statement is false, thus } n^{\log{n}}
+\text{ is never } O(n^k).\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 3.13:</strong> <span
