@@ -756,9 +756,6 @@ $$
         1 & -1 & -1 & 1
     \end{bmatrix}
     $$
-    $$
-    \text{Now using the formula } H^{\otimes 2} = \frac{1}{\sqrt{2^2}} \sum_{x,y \in \{0, 1\}^2}{(-1)^{xy}\ket{x}\bra{y}} = \sum_{x,y \in \{00, 01, 10, 11 \}}{(-1)^{xy}\ket{x}\bra{y}}
-    $$
     \textbf{Base case n = 1}
     $$
     \text{Substituting } \ket{1} \text{ with } \begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with } \begin{bmatrix}0 \\ 1\end{bmatrix} $$
@@ -830,20 +827,39 @@ $$
     $$
     $$
     = \frac{1}{\sqrt{2^{k+1}}}\sum_{x',y'\in\{0,1\}}\sum_{x'',y''\in\{0,1\}^k}{(-1)^{x'y'}(-1)^{x''y''}[(\ket{x'}\bra{y'}) \otimes (\ket{x''}\bra{y''})]}
-     \text{ from (2.42)} \overset{**}{=}
+     \text{ from (2.42)}
     $$
     $$
-    \text{We want to perform the change of variables where } x \text{ is } (x', x''), \text{ where } x' \text{ is 1 bit and } x'' \text{ is k bit long}   
+    \text{We can explicitly write out all of the combinations, as } x',y' \text{ can be wither 0 or 1, so we have:} 
     $$
     $$
-    \{0,1\} \times \{0,1\}^k = \{(x, y) \mid x \in \{0,1\}, y \in \{0,1\}^k\} = \{(0, y) \mid y \in \{0,1\}^k\} \cup \{(1, y) \mid y \in \{0,1\}^k\} = \{0,1\}^{k+1}
+    \frac{1}{\sqrt{2^{k+1}}}(\sum_{x'',y''\in\{0,1\}^k}{(-1)^{0 \cdot 0}(-1)^{x''y''}\ket{0}\bra{0} \otimes \ket{x''}\bra{y''}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{0 \cdot 1}(-1)^{x''y''}\ket{0}\bra{1} \otimes \ket{x''}\bra{y''}} +
     $$
     $$
-    \text{So, Considering } (-1)^{x'y'}(-1)^{x''y''} \text { we expand the definition of the binary inner product and have: } 
+    + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{1 \cdot 0}(-1)^{x''y''}\ket{1}\bra{0} \otimes \ket{x''}\bra{y''}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{1 \cdot 1}(-1)^{x''y''}\ket{1}\bra{1} \otimes \ket{x''}\bra{y''}} ) = 
     $$
     $$
-    (-1)^{x'y'}(-1)^{\sum_{i = 1}^{k}{x_i}} = 
+    \frac{1}{\sqrt{2^{k+1}}}(\sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\ket{0}\bra{0} \otimes \ket{x''}\bra{y''}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\ket{0}\bra{1} \otimes \ket{x''}\bra{y''}} +
     $$
+    $$
+    + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\ket{1}\bra{0} \otimes \ket{x''}\bra{y''}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y'' + 1}\ket{1}\bra{1} \otimes \ket{x''}\bra{y''}} \space \space) = 
+    $$
+    $$
+    = \frac{1}{\sqrt{2^{k+1}}}(\sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\begin{bmatrix}\ket{x''}\bra{y''} & 0 \\ 0 & 0\end{bmatrix}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\begin{bmatrix}0 & \ket{x''}\bra{y''} \\ 0 & 0\end{bmatrix}} + 
+    $$
+    $$
+    + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''}\begin{bmatrix}0 & 0 \\ \ket{x''}\bra{y''} & 0\end{bmatrix}} + \sum_{x'',y''\in\{0,1\}^k}{(-1)^{x''y''+1}\begin{bmatrix}0 & 0 \\ 0 & \ket{x''}\bra{y''}\end{bmatrix}} \space \space)
+    $$
+    $$
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}H^{\otimes k} & H^{\otimes k} \\ H^{\otimes k} & -H^{\otimes k}\end{bmatrix} = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} \otimes H^{\otimes k} = H^{\otimes (k+1)}
+    $$.
+    $$
+    \text{From the assumption for } n = k \text{ we have established a fact for } n = k + 1 
+    $$
+    $$
+    \text{ thus proving by principal of mathematrical induction}.
+    $$
+    
 
 
 \end{framed}

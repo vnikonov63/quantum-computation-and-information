@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.21)  23 FEB 2025 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.21)  24 FEB 2025 08:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1018,38 +1018,20 @@ Overfull \hbox (4.43472pt too wide) detected at line 688
 []
  []
 
-[10] [11]
-Overfull \hbox (7.32565pt too wide) detected at line 840
-\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OMS/cms
-y/m/n/10 g ^^B f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OMS/cmsy/
-m/n/10 g[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
-0 x; y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 
-2 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g\OML/
-cmm/m/it/10 ; y \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cm
-r/m/n/10 1\OMS/cmsy/m/n/10 g[]g \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/
-n/10 (0\OML/cmm/m/it/10 ; y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 j \OML/cmm/m/it/1
-0 y \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\O
-MS/cmsy/m/n/10 g[]g [ f\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; y\OT1/cmr/m/n/10 ) 
-\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 0\OML
-/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g[]g \OT1/cmr/m/n/10 = \OMS/cm
-sy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OMS/cmsy/m/n/1
-0 g[]
- []
-
-[12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
-<images/3.4TM.jpg, id=156, 1434.35875pt x 679.53876pt>
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+<images/3.4TM.jpg, id=154, 1434.35875pt x 679.53876pt>
 File: images/3.4TM.jpg Graphic file (type jpg)
 <use images/3.4TM.jpg>
-Package pdftex.def Info: images/3.4TM.jpg  used on input line 1550.
+Package pdftex.def Info: images/3.4TM.jpg  used on input line 1566.
 (pdftex.def)             Requested size: 496.05328pt x 235.00105pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1551.
+(caption)                particular \caption on input line 1567.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (45.09825pt too wide) in paragraph at lines 1550--1551
+Overfull \hbox (45.09825pt too wide) in paragraph at lines 1566--1567
  [] 
  []
 
@@ -1077,14 +1059,12 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
@@ -1092,10 +1072,10 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on build/main.pdf (32 pages, 318250 bytes).
+Output written on build/main.pdf (32 pages, 302471 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
  86 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

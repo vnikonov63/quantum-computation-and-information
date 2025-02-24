@@ -1055,11 +1055,8 @@ is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in
         1 &amp; -1 &amp; 1 &amp; -1 \\
         1 &amp; 1 &amp; -1 &amp; -1 \\
         1 &amp; -1 &amp; -1 &amp; 1
-    \end{bmatrix}\]</span> <span class="math display">\[\text{Now using
-the formula } H^{\otimes 2} = \frac{1}{\sqrt{2^2}} \sum_{x,y \in \{0,
-1\}^2}{(-1)^{xy}\ket{x}\bra{y}} = \sum_{x,y \in \{00, 01, 10, 11
-\}}{(-1)^{xy}\ket{x}\bra{y}}\]</span> <strong>Base case n = 1</strong>
-<span class="math display">\[\text{Substituting } \ket{1} \text{ with }
+    \end{bmatrix}\]</span> <strong>Base case n = 1</strong> <span
+class="math display">\[\text{Substituting } \ket{1} \text{ with }
 \begin{bmatrix}1 \\ 0\end{bmatrix} \text{ and } \ket{0} \text{ with }
 \begin{bmatrix}0 \\ 1\end{bmatrix}\]</span> <span
 class="math display">\[\text{ (2.54) becomes } H =
@@ -1236,18 +1233,50 @@ class="math inline">\(y=y_1y_2\)</span></th>
      \text{ from (1)}\]</span> <span class="math display">\[=
 \frac{1}{\sqrt{2^{k+1}}}\sum_{x&#39;,y&#39;\in\{0,1\}}\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;y&#39;}(-1)^{x&#39;&#39;y&#39;&#39;}[(\ket{x&#39;}\bra{y&#39;})
 \otimes (\ket{x&#39;&#39;}\bra{y&#39;&#39;})]}
-     \text{ from (2.42)} \overset{**}{=}\]</span> <span
-class="math display">\[\text{We want to perform the change of variables
-where } x \text{ is } (x&#39;, x&#39;&#39;), \text{ where } x&#39;
-\text{ is 1 bit and } x&#39;&#39; \text{ is k bit long}\]</span> <span
-class="math display">\[\{0,1\} \times \{0,1\}^k = \{(x, y) \mid x \in
-\{0,1\}, y \in \{0,1\}^k\} = \{(0, y) \mid y \in \{0,1\}^k\} \cup \{(1,
-y) \mid y \in \{0,1\}^k\} = \{0,1\}^{k+1}\]</span> <span
-class="math display">\[\text{So, Considering }
-(-1)^{x&#39;y&#39;}(-1)^{x&#39;&#39;y&#39;&#39;} \text { we expand the
-definition of the binary inner product and have: }\]</span> <span
-class="math display">\[(-1)^{x&#39;y&#39;}(-1)^{\sum_{i = 1}^{k}{x_i}}
-=\]</span></p>
+     \text{ from (2.42)}\]</span> <span class="math display">\[\text{We
+can explicitly write out all of the combinations, as } x&#39;,y&#39;
+\text{ can be wither 0 or 1, so we have:}\]</span> <span
+class="math display">\[\frac{1}{\sqrt{2^{k+1}}}(\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{0
+\cdot 0}(-1)^{x&#39;&#39;y&#39;&#39;}\ket{0}\bra{0} \otimes
+\ket{x&#39;&#39;}\bra{y&#39;&#39;}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{0 \cdot
+1}(-1)^{x&#39;&#39;y&#39;&#39;}\ket{0}\bra{1} \otimes
+\ket{x&#39;&#39;}\bra{y&#39;&#39;}} +\]</span> <span
+class="math display">\[+
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{1 \cdot
+0}(-1)^{x&#39;&#39;y&#39;&#39;}\ket{1}\bra{0} \otimes
+\ket{x&#39;&#39;}\bra{y&#39;&#39;}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{1 \cdot
+1}(-1)^{x&#39;&#39;y&#39;&#39;}\ket{1}\bra{1} \otimes
+\ket{x&#39;&#39;}\bra{y&#39;&#39;}} ) =\]</span> <span
+class="math display">\[\frac{1}{\sqrt{2^{k+1}}}(\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\ket{0}\bra{0}
+\otimes \ket{x&#39;&#39;}\bra{y&#39;&#39;}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\ket{0}\bra{1}
+\otimes \ket{x&#39;&#39;}\bra{y&#39;&#39;}} +\]</span> <span
+class="math display">\[+
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\ket{1}\bra{0}
+\otimes \ket{x&#39;&#39;}\bra{y&#39;&#39;}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;
++ 1}\ket{1}\bra{1} \otimes \ket{x&#39;&#39;}\bra{y&#39;&#39;}} \space
+\space) =\]</span> <span class="math display">\[=
+\frac{1}{\sqrt{2^{k+1}}}(\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\begin{bmatrix}\ket{x&#39;&#39;}\bra{y&#39;&#39;}
+&amp; 0 \\ 0 &amp; 0\end{bmatrix}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\begin{bmatrix}0
+&amp; \ket{x&#39;&#39;}\bra{y&#39;&#39;} \\ 0 &amp; 0\end{bmatrix}}
++\]</span> <span class="math display">\[+
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;}\begin{bmatrix}0
+&amp; 0 \\ \ket{x&#39;&#39;}\bra{y&#39;&#39;} &amp; 0\end{bmatrix}} +
+\sum_{x&#39;&#39;,y&#39;&#39;\in\{0,1\}^k}{(-1)^{x&#39;&#39;y&#39;&#39;+1}\begin{bmatrix}0
+&amp; 0 \\ 0 &amp; \ket{x&#39;&#39;}\bra{y&#39;&#39;}\end{bmatrix}}
+\space \space)\]</span> <span class="math display">\[=
+\frac{1}{\sqrt{2}}\begin{bmatrix}H^{\otimes k} &amp; H^{\otimes k} \\
+H^{\otimes k} &amp; -H^{\otimes k}\end{bmatrix} =
+\frac{1}{\sqrt{2}}\begin{bmatrix}1 &amp; 1 \\ 1 &amp; -1\end{bmatrix}
+\otimes H^{\otimes k} = H^{\otimes (k+1)}\]</span>. <span
+class="math display">\[\text{From the assumption for } n = k \text{ we
+have established a fact for } n = k + 1\]</span> <span
+class="math display">\[\text{ thus proving by principal of mathematrical
+induction}.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.34</strong></p>
