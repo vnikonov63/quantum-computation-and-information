@@ -204,7 +204,7 @@ style="background-color: green!30"><strong>7</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>8</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>9</strong></span></td>
+style="background-color: green!30"><strong>9</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>10</strong></span></td>
 </tr>
@@ -212,7 +212,7 @@ style="background-color: red!30"><strong>10</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: yellow!30"><strong>11</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>12</strong></span></td>
+style="background-color: yellow!30"><strong>12</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>13</strong></span></td>
 <td style="text-align: center;"><span
@@ -226,7 +226,7 @@ style="background-color: green!30"><strong>16</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>17</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>18</strong></span></td>
+style="background-color: green!30"><strong>18</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>19</strong></span></td>
 <td style="text-align: center;"><span
@@ -529,6 +529,30 @@ class="math inline">\(\sqrt{2}\)</span>.</p>
 <div class="framed">
 <p><strong>Exercise 2.9: (Pauli operators and the outer
 product)</strong></p>
+<p>Consider:</p>
+<ul>
+<li><p><span class="math inline">\(\ket{0}\bra{0} = \begin{bmatrix}1 \\
+0\end{bmatrix}\begin{bmatrix}1 &amp; 0\end{bmatrix} = \begin{bmatrix}1
+&amp; 0\\ 0 &amp; 0\end{bmatrix}\)</span></p></li>
+<li><p><span class="math inline">\(\ket{0}\bra{1} = \begin{bmatrix}1 \\
+0\end{bmatrix}\begin{bmatrix}0 &amp; 1\end{bmatrix} = \begin{bmatrix}0
+&amp; 1\\ 0 &amp; 0\end{bmatrix}\)</span></p></li>
+<li><p><span class="math inline">\(\ket{1}\bra{0} = \begin{bmatrix}0 \\
+1\end{bmatrix}\begin{bmatrix}1 &amp; 0\end{bmatrix} = \begin{bmatrix}0
+&amp; 0\\ 1 &amp; 0\end{bmatrix}\)</span></p></li>
+<li><p><span class="math inline">\(\ket{1}\bra{1} = \begin{bmatrix}0 \\
+1\end{bmatrix}\begin{bmatrix}0 &amp; 1\end{bmatrix} = \begin{bmatrix}0
+&amp; 0\\ 0 &amp; 1\end{bmatrix}\)</span></p></li>
+</ul>
+<ul>
+<li><p><span class="math inline">\(X = \begin{bmatrix}0 &amp; 1 \\ 1
+&amp; 0\end{bmatrix} = \ket{0}\bra{1} + \ket{1}\bra{0}\)</span></p></li>
+<li><p><span class="math inline">\(Y=\begin{bmatrix}0 &amp; -i \\ i
+&amp; 0\end{bmatrix} = i\ket{0}\bra{1} -
+i\ket{1}\bra{0}\)</span></p></li>
+<li><p><span class="math inline">\(Z=\begin{bmatrix}1 &amp; 0 \\ 0 &amp;
+-1\end{bmatrix} = \ket{0}\bra{0} - \ket{1}\bra{1}\)</span></p></li>
+</ul>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.10</strong></p>
@@ -607,6 +631,10 @@ class="math inline">\(Z\ket{v} = -\ket{v} \implies \begin{bmatrix} 1
 </div>
 <div class="framed">
 <p><strong>Exercise 2.12</strong></p>
+<p><span class="math display">\[\text{Consider } A - \lambda I =
+\begin{bmatrix}1 - \lambda &amp; 0 \\ 1&amp; 1 - \lambda\end{bmatrix}
+\implies \det(A -\lambda I) = (1 - \lambda)^{2} = 0 \implies \lambda = 1
+\text{ is the only eigenvalue.}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.13</strong></p>
