@@ -258,15 +258,15 @@ style="background-color: green!30"><strong>30</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><span
-style="background-color: yellow!30"><strong>31</strong></span></td>
+style="background-color: red!30"><strong>31</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: red!30"><strong>32</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: yellow!30"><strong>33</strong></span></td>
+style="background-color: green!30"><strong>33</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>34</strong></span></td>
+style="background-color: green!30"><strong>34</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>35</strong></span></td>
+style="background-color: green!30"><strong>35</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><span
@@ -1027,12 +1027,6 @@ B)^{\dagger} = A \otimes B\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.31</strong></p>
-<p><span class="math display">\[\text{From page 71 a positive operator A
-is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in
-\mathbb{R}_{\geq 0}\]</span> <span class="math display">\[\text{Consider
-} A \otimes B, \text{ where } A,B \text{ are positive operators}
-\implies
-    (\ket{v}, (A \otimes B)\ket{v}) =\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.32</strong></p>
@@ -1275,15 +1269,117 @@ H^{\otimes k} &amp; -H^{\otimes k}\end{bmatrix} =
 \otimes H^{\otimes k} = H^{\otimes (k+1)}\]</span>. <span
 class="math display">\[\text{From the assumption for } n = k \text{ we
 have established a fact for } n = k + 1\]</span> <span
-class="math display">\[\text{ thus proving by principal of mathematrical
+class="math display">\[\text{ thus proving by principal of mathematical
 induction}.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.34</strong></p>
+<p><span class="math display">\[\text{Eigenvalues of M are: }
+\lambda_{1,2} = 4 \pm \sqrt{16 - 7} = 1,7. \text{ Corresponding
+eigenvectors: }\ket{v_1}=\begin{bmatrix}1 \\ -1\end{bmatrix}, \ket{v_2}
+= \begin{bmatrix}1 \\ 1\end{bmatrix}.\]</span> <span
+class="math display">\[\text{Diagonal representation of A is: }
+\frac{\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} +
+\frac{7\ket{v_2}\bra{v_2}}{\|v_2\|^{2}}\]</span></p>
+<ul>
+<li><p><strong>Square root</strong> <span
+class="math display">\[\sqrt{A} \text{ is defined in (2.1.8) to be }
+\frac{\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} +
+\frac{\sqrt{7}\ket{v_2}\bra{v_2}}{\|v_2\|^{2}} =
+\begin{bmatrix}\frac{1}{2} &amp; -\frac{1}{2}\\ -\frac{1}{2} &amp;
+\frac{1}{2}\end{bmatrix} + \begin{bmatrix}\frac{\sqrt{7}}{2} &amp;
+\frac{\sqrt{7}}{2} \\ \frac{\sqrt{7}}{2} &amp;
+\frac{\sqrt{7}}{2}\end{bmatrix}\]</span> <span class="math display">\[=
+\begin{bmatrix}\frac{1 + \sqrt{7}}{2} &amp; \frac{-1 + \sqrt{7}}{2} \\
+\frac{-1 + \sqrt{7}}{2} &amp; \frac{1 +
+\sqrt{7}}{2}\end{bmatrix}\]</span></p></li>
+<li><p><strong>Logarithm</strong> <span
+class="math display">\[\text{Equivalently } \log(A)
+=  \frac{\log{1}\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} +
+\frac{\log{7}\ket{v_2}\bra{v_2}}{\|v_2\|^{2}} =
+\begin{bmatrix}\frac{\log{7}}{2} &amp; \frac{\log{7}}{2} \\
+\frac{\log{7}}{2} &amp; \frac{\log{7}}{2}\end{bmatrix} \text{ as
+}\log{1} = 0 \text{ in any base}.\]</span></p></li>
+</ul>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.35: (Exponential of the Pauli
 matrices)</strong></p>
+<p><span class="math display">\[\text{Consider } \vec{v} \cdot
+\vec{\sigma} = \sum_{i=1}^{3}{v_i\sigma_i}. \text{ Squaring we get: }
+\sum_{i=1}^{3}\sum_{j=1}^{3}v_i\sigma_iv_j\sigma_j =
+\sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j\sigma_i\sigma_j =\]</span> <span
+class="math display">\[= \sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j(\delta_{ij}I
++ i\sum_{l=1}^{3}{\epsilon_{ijl}\sigma_l}) \text{ from } (2.78)\]</span>
+<span class="math display">\[=
+\underbrace{\sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j\delta_{ij}I}_{(1)} +
+\underbrace{i\sum_{i=1}^{3}\sum_{j=1}^{3}\sum_{l=1}^{3}{\epsilon_{ijl}v_iv_j\sigma_l}}_{(2)}\]</span>
+<span class="math display">\[(1) = \sum_{i=1}^{3}v_{i}^{2}I \text{ as
+only the terms with the same index last, as } \delta_{ij} = 0 \text{ for
+} i = j.\]</span> <span class="math display">\[\text{We know, that }
+i\text{&#39;th component of } \vec{a} \times \vec{b} \text{ is }
+\sum_{j=1}^{3}\sum_{k=1}^{3}\epsilon_{ijk}a_jb_k \text{. Rewriting } (2)
+\text{, get:}\]</span> <span
+class="math display">\[i\sum_{l=1}^{3}(\sum_{i=1}^{3}\sum_{j=1}^{3}\epsilon_{ijk}v_iv_j)\sigma_l
+= i\sum_{l=1}(\vec{v} \times \vec{v})_{l}\sigma_{l} = 0 \text{ as a
+cross product of a vector with itself is always} 0.\]</span> <span
+class="math display">\[\text{So } (\vec{v} \cdot \vec{\sigma})^2 =
+\|v\|_2I = I \text{ as } \vec{v} \text{ is a unit vector.}\]</span>
+<span class="math display">\[\text{Say } A=\vec{v}\cdot\vec{\sigma}.
+\text{ We know: }AA=I. \text{ Consider eigenvalues} A\ket{v} =
+\lambda\ket{v} \implies AA\ket{v} = A\lambda  \ket{v} \implies\]</span>
+<span class="math display">\[I\ket{v} = \lambda A\ket{v} \implies
+I\ket{v} = \lambda^2\ket{v} \implies \lambda^2 = 1 \implies \lambda =
+\pm 1.\]</span> <span class="math display">\[\text{Say corresponding
+eigenvectors} \text{ are } \ket{v_{+1}}, \ket{v_{-1}} \text{ then we
+have following spectral decomposition:}\]</span> <span
+class="math display">\[A= \ket{v_{+1}}\bra{v_{+1}} -
+\ket{v_{-1}}\bra{v_{-1}} \text{ and } \exp(i\theta \vec{v} \cdot
+\vec{\sigma}) = \exp(i\theta A) = e^{i\theta}\ket{v_{+1}}\bra{v_{+1}} +
+e^{-i\theta}\ket{v_{-1}}\bra{v_{-1}} (3)\]</span> <span
+class="math display">\[A^{2} =
+\ket{v_{+1}}\bra{v_{+1}}\ket{v_{+1}}\bra{v_{+1}} -
+\ket{v_{+1}}\bra{v_{+1}}\ket{v_{-1}}\bra{v_{-1}} -
+\ket{v_{-1}}\bra{v_{-1}}\ket{v_{+1}}\bra{v_{+1}} +
+\ket{v_{-1}}\bra{v_{-1}}\ket{v_{-1}}\bra{v_{-1}}.\]</span> <span
+class="math display">\[\bra{v_{-1}}\ket{v_{-1}} = 1,
+\bra{v_{+1}}\ket{v_{+1}} = 1, \bra{v_{-1}}\ket{v_{+1}} = 0 \text{ as }
+\ket{v_{+1}} \text{ and } \ket{v_{-1}} \text{ are orthogonal} \implies
+\text{ above is:}\]</span> <span class="math display">\[A^2 = I =
+\ket{v_{+1}}\bra{v_{+1}} - 0 + 0 + \ket{v_{-1}}\bra{v_{-1}}\]</span> We
+can see, that:</p>
+<ul>
+<li><p><span class="math inline">\(\ket{v_{+1}}\bra{v_{+1}} = \frac{A +
+I}{2}\)</span></p></li>
+<li><p><span class="math inline">\(\ket{v_{-1}}\bra{v_{-1}} = \frac{I -
+A}{2}\)</span></p></li>
+</ul>
+<p><span class="math display">\[\text{So } (3) \text{ can be rewritten
+as: } \exp(i\theta \vec{v} \cdot \vec{\sigma}) = e^{i\theta}\frac{A +
+I}{2} + e^{-i\theta}\frac{I - A}{2} = A\frac{e^{i \theta} - e^{-i
+\theta}}{2} + I\frac{e^{i \theta} + e^{-i \theta}}{2}\]</span> <span
+class="math display">\[= Ai\sin(\theta) + I\cos{\theta} = \cos{\theta}I
++ i\sin{\theta}\vec{v}\cdot \vec{\sigma} \text{ from Euler&#39;s
+formula}.\]</span></p>
+<p><span class="math display">\[\textbf{Note:} \text{ It is also
+possible to see, that } AA = I \text{ can be computed explicitly without
+&quot;Levi-Civita symbol&quot;}.\]</span> <span class="math display">\[A
+= \vec{v} \cdot \vec{\sigma} = \sum_{i=1}^{3}v_i\sigma_{i} =
+v_1\begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} +
+v_2\begin{bmatrix}0 &amp; -i \\ i &amp; 0\end{bmatrix} +
+v_3\begin{bmatrix}1 &amp; 0 \\ 0 &amp; -1\end{bmatrix}\]</span> <span
+class="math display">\[= \begin{bmatrix}0 &amp; v_1 \\ v_1 &amp;
+0\end{bmatrix} + \begin{bmatrix}0 &amp; -iv_2 \\ iv_2 &amp;
+0\end{bmatrix} + \begin{bmatrix}v_3 &amp; 0 \\ 0 &amp; -v_3\end{bmatrix}
+= \begin{bmatrix}v_3 &amp; v_1-iv_2 \\ v_1 + iv_2 &amp;
+-v_3\end{bmatrix}\]</span> <span class="math display">\[A^2 =
+\begin{bmatrix} v_3^2 +v_1^2 -iv_1v_2 + iv_1v_2 -iv_2  &amp; v_3v_1
+-iv_2v_3 -v_1v_3 + iv_2v_3\\ v_1v_3 + iv_2v_3 -v_3v_1 -iv_2v_3 &amp;
+v_1^2 +iv_1v_2 - iv_1v_2 -i^2v_2 + v_3 \end{bmatrix}\]</span> <span
+class="math display">\[= \begin{bmatrix}v_1^2+v_2^2+v_3^2 &amp; 0 \\ 0
+&amp; v_1^2+v_2^2+v_3^2\end{bmatrix} = I.\]</span> <span
+class="math display">\[\text{as } \vec{v} \text{ is a unit
+vector}.\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.36</strong></p>

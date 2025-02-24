@@ -41,7 +41,7 @@
 \solved{16} & \solved{17} & \solved{18} & \solved{19} & \notStarted{20} \\
 \notStarted{21} & \notStarted{22} & \notStarted{23} & \inProgress {24} & \solved{25} \\
 \solved{26} & \solved{27} & \notStarted{28} & \solved{29} & \solved{30} \\
-\inProgress{31} & \notStarted{32} & \inProgress{33} & \notStarted{34} & \notStarted{35} \\
+\notStarted{31} & \notStarted{32} & \solved{33} & \solved{34} & \solved{35} \\
 \solved{36} & \inProgress{37} & \solved{38} & \notStarted{39} & \solved{40} \\
 \solved{41} & \solved{42} & \solved{43} & \solved{44} & \solved{45} \\
 \solved{46} & \solved{47} & \notStarted{48} & \notStarted{49} & \notStarted{50} \\
@@ -713,14 +713,7 @@ $$
     \noindent \textbf{Exercise 2.31}
     
     \medskip
-    
-    $$
-    \text{From page 71 a positive operator A is defined as: } \forall \ket{v} (\ket{v}, A\ket{v}) \in \mathbb{R}_{\geq 0}
-    $$  
-    $$
-    \text{Consider } A \otimes B, \text{ where } A,B \text{ are positive operators} \implies 
-    (\ket{v}, (A \otimes B)\ket{v}) = 
-    $$
+
 \end{framed}
 
 \bigskip
@@ -857,7 +850,7 @@ $$
     \text{From the assumption for } n = k \text{ we have established a fact for } n = k + 1 
     $$
     $$
-    \text{ thus proving by principal of mathematrical induction}.
+    \text{ thus proving by principal of mathematical induction}.
     $$
     
 
@@ -870,7 +863,25 @@ $$
     \noindent \textbf{Exercise 2.34}
     
     \medskip
-    
+    $$
+    \text{Eigenvalues of M are: } \lambda_{1,2} = 4 \pm \sqrt{16 - 7} = 1,7. \text{ Corresponding eigenvectors: }\ket{v_1}=\begin{bmatrix}1 \\ -1\end{bmatrix}, \ket{v_2} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
+    $$
+    $$
+    \text{Diagonal representation of A is: } \frac{\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} + \frac{7\ket{v_2}\bra{v_2}}{\|v_2\|^{2}}
+    $$
+    \begin{itemize}
+        \item \textbf{Square root}
+        $$
+        \sqrt{A} \text{ is defined in (2.1.8) to be } \frac{\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} + \frac{\sqrt{7}\ket{v_2}\bra{v_2}}{\|v_2\|^{2}} = \begin{bmatrix}\frac{1}{2} & -\frac{1}{2}\\ -\frac{1}{2} & \frac{1}{2}\end{bmatrix} + \begin{bmatrix}\frac{\sqrt{7}}{2} & \frac{\sqrt{7}}{2} \\ \frac{\sqrt{7}}{2} & \frac{\sqrt{7}}{2}\end{bmatrix}
+        $$
+        $$
+        = \begin{bmatrix}\frac{1 + \sqrt{7}}{2} & \frac{-1 + \sqrt{7}}{2} \\ \frac{-1 + \sqrt{7}}{2} & \frac{1 + \sqrt{7}}{2}\end{bmatrix}
+        $$
+        \item \textbf{Logarithm}
+        $$
+        \text{Equivalently } \log(A) =  \frac{\log{1}\ket{v_1}\bra{v_1}}{\|v_1\|^{2}} + \frac{\log{7}\ket{v_2}\bra{v_2}}{\|v_2\|^{2}} = \begin{bmatrix}\frac{\log{7}}{2} & \frac{\log{7}}{2} \\ \frac{\log{7}}{2} & \frac{\log{7}}{2}\end{bmatrix} \text{ as }\log{1} = 0 \text{ in any base}.
+        $$
+    \end{itemize}
     
 \end{framed}
 
@@ -880,6 +891,78 @@ $$
     \noindent \textbf{Exercise 2.35: (Exponential of the Pauli matrices)}
     
     \medskip
+    $$
+    \text{Consider } \vec{v} \cdot \vec{\sigma} = \sum_{i=1}^{3}{v_i\sigma_i}. \text{ Squaring we get: } \sum_{i=1}^{3}\sum_{j=1}^{3}v_i\sigma_iv_j\sigma_j = \sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j\sigma_i\sigma_j = 
+    $$
+    $$
+    = \sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j(\delta_{ij}I + i\sum_{l=1}^{3}{\epsilon_{ijl}\sigma_l}) \text{ from } (2.78) 
+    $$
+    $$
+    = \underbrace{\sum_{i=1}^{3}\sum_{j=1}^{3}v_iv_j\delta_{ij}I}_{(1)} + \underbrace{i\sum_{i=1}^{3}\sum_{j=1}^{3}\sum_{l=1}^{3}{\epsilon_{ijl}v_iv_j\sigma_l}}_{(2)}
+    $$
+    $$
+    (1) = \sum_{i=1}^{3}v_{i}^{2}I \text{ as only the terms with the same index last, as } \delta_{ij} = 0 \text{ for } i = j.
+    $$
+    $$
+    \text{We know, that } i\text{'th component of } \vec{a} \times \vec{b} \text{ is } \sum_{j=1}^{3}\sum_{k=1}^{3}\epsilon_{ijk}a_jb_k \text{. Rewriting } (2) \text{, get:}
+    $$
+    $$
+    i\sum_{l=1}^{3}(\sum_{i=1}^{3}\sum_{j=1}^{3}\epsilon_{ijk}v_iv_j)\sigma_l = i\sum_{l=1}(\vec{v} \times \vec{v})_{l}\sigma_{l} = 0 \text{ as a cross product of a vector with itself is always} 0.
+    $$
+    $$
+    \text{So } (\vec{v} \cdot \vec{\sigma})^2 = \|v\|_2I = I \text{ as } \vec{v} \text{ is a unit vector.}
+    $$
+    $$
+    \text{Say } A=\vec{v}\cdot\vec{\sigma}. \text{ We know: }AA=I. \text{ Consider eigenvalues} A\ket{v} = \lambda\ket{v} \implies AA\ket{v} = A\lambda  \ket{v} \implies
+    $$
+    $$
+    I\ket{v} = \lambda A\ket{v} \implies I\ket{v} = \lambda^2\ket{v} \implies \lambda^2 = 1 \implies \lambda = \pm 1.
+    $$
+    $$
+    \text{Say corresponding eigenvectors} \text{ are } \ket{v_{+1}}, \ket{v_{-1}} \text{ then we have following spectral decomposition:}
+    $$
+    $$
+    A= \ket{v_{+1}}\bra{v_{+1}} - \ket{v_{-1}}\bra{v_{-1}} \text{ and } \exp(i\theta \vec{v} \cdot \vec{\sigma}) = \exp(i\theta A) = e^{i\theta}\ket{v_{+1}}\bra{v_{+1}} + e^{-i\theta}\ket{v_{-1}}\bra{v_{-1}} (3)
+    $$
+    $$
+    A^{2} = \ket{v_{+1}}\bra{v_{+1}}\ket{v_{+1}}\bra{v_{+1}} - \ket{v_{+1}}\bra{v_{+1}}\ket{v_{-1}}\bra{v_{-1}} - \ket{v_{-1}}\bra{v_{-1}}\ket{v_{+1}}\bra{v_{+1}} + \ket{v_{-1}}\bra{v_{-1}}\ket{v_{-1}}\bra{v_{-1}}.
+    $$
+    $$
+    \bra{v_{-1}}\ket{v_{-1}} = 1, \bra{v_{+1}}\ket{v_{+1}} = 1, \bra{v_{-1}}\ket{v_{+1}} = 0 \text{ as } \ket{v_{+1}} \text{ and } \ket{v_{-1}} \text{ are orthogonal} \implies \text{ above is:}
+    $$
+    $$
+    A^2 = I = \ket{v_{+1}}\bra{v_{+1}} - 0 + 0 + \ket{v_{-1}}\bra{v_{-1}}
+    $$
+    We can see, that:
+    \begin{itemize}
+        \item $\ket{v_{+1}}\bra{v_{+1}} = \frac{A + I}{2}$
+        \item $\ket{v_{-1}}\bra{v_{-1}} = \frac{I - A}{2}$
+    \end{itemize}
+    $$
+    \text{So } (3) \text{ can be rewritten as: } \exp(i\theta \vec{v} \cdot \vec{\sigma}) = e^{i\theta}\frac{A + I}{2} + e^{-i\theta}\frac{I - A}{2} = A\frac{e^{i \theta} - e^{-i \theta}}{2} + I\frac{e^{i \theta} + e^{-i \theta}}{2}
+    $$
+    $$
+    = Ai\sin(\theta) + I\cos{\theta} = \cos{\theta}I + i\sin{\theta}\vec{v}\cdot \vec{\sigma} \text{ from Euler's formula}.
+    $$
+
+    $$
+    \textbf{Note:} \text{ It is also possible to see, that } AA = I \text{ can be computed explicitly without "Levi-Civita symbol"}.
+    $$
+    $$
+    A = \vec{v} \cdot \vec{\sigma} = \sum_{i=1}^{3}v_i\sigma_{i} = v_1\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + v_2\begin{bmatrix}0 & -i \\ i & 0\end{bmatrix} + v_3\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}
+    $$
+    $$
+    = \begin{bmatrix}0 & v_1 \\ v_1 & 0\end{bmatrix} + \begin{bmatrix}0 & -iv_2 \\ iv_2 & 0\end{bmatrix} + \begin{bmatrix}v_3 & 0 \\ 0 & -v_3\end{bmatrix} = \begin{bmatrix}v_3 & v_1-iv_2 \\ v_1 + iv_2 & -v_3\end{bmatrix}
+    $$
+    $$
+    A^2 = \begin{bmatrix} v_3^2 +v_1^2 -iv_1v_2 + iv_1v_2 -iv_2  & v_3v_1 -iv_2v_3 -v_1v_3 + iv_2v_3\\ v_1v_3 + iv_2v_3 -v_3v_1 -iv_2v_3 & v_1^2 +iv_1v_2 - iv_1v_2 -i^2v_2 + v_3 \end{bmatrix}
+    $$
+    $$
+    = \begin{bmatrix}v_1^2+v_2^2+v_3^2 & 0 \\ 0 & v_1^2+v_2^2+v_3^2\end{bmatrix} = I.
+    $$
+    $$
+    \text{as } \vec{v} \text{ is a unit vector}.
+    $$
     
     
 \end{framed}
@@ -918,6 +1001,7 @@ $$
     $$
     = \sum_{j=1}^{n}(BA)_{jj} = \operatorname{tr}(BA)
     $$
+    
     
 \end{framed}
 
