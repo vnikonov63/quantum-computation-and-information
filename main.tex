@@ -51,7 +51,7 @@
 \notStarted{66} & \notStarted{67} & \notStarted{68} & \notStarted{69} & \notStarted{70} \\
 \notStarted{71} & \notStarted{72} & \notStarted{73} & \notStarted{74} & \notStarted{75} \\
 \notStarted{76} & \notStarted{77} & \notStarted{78} & \notStarted{79} & \notStarted{80} \\
-\notStarted{81} & \notStarted{82} & \notStarted{EOC1} & \notStarted{EOC2} & \notStarted{EOC3} \\
+\notStarted{81} & \notStarted{82} & \solved{EOC1} & \notStarted{EOC2} & \notStarted{EOC3} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1559,7 +1559,33 @@ Consider $[A, B] = AB - BA = -(-AB + BA) = - (BA - AB) = -[B, A]$
     \noindent \textbf{End of Chapter Exercise 2.1: (Functions of the Pauli matrices)}
     
     \medskip
-    
+    $$
+    \text{Consider } A = \vec{v} \cdot \vec{\sigma} = \sum_{i=1}^{3}{v_i\sigma_i}. \text{ In Exercise } (2.35)  \text{ we have established, that:}
+    $$
+    $$
+        A = \ket{v_{+1}}\bra{v_{+1}} - \ket{v_{-1}}\bra{v_{-1}}
+    $$
+    \begin{equation}
+    \text{Following definition of a matrix function we get, } f(\theta A) = f(\theta)\ket{v_{+1}}\bra{v_{+1}}+f(-\theta)\ket{v_{-1}}\bra{v_{-1}}
+    \tag{1}
+    \end{equation}
+    $$
+    A^2 = I = \ket{v_{+1}}\bra{v_{+1}} + \ket{v_{-1}}\bra{v_{-1}} 
+    $$
+    Consider:
+    \begin{itemize}
+        \item $\ket{v_{+1}}\bra{v_{+1}} = \frac{A + I}{2}$
+        \item $\ket{v_{-1}}\bra{v_{-1}} = \frac{I -A}{2}$
+    \end{itemize}
+    $$
+    \text{We can write } (1) \text{ as: } f(\theta A) = f(\theta)\frac{A + I}{2} + f(-\theta) \frac{I -A}{2} = \frac{f(\theta)A}{2} + \frac{f(\theta)I}{2} + \frac{f(-\theta)I}{2} - \frac{f(-\theta)A}{2} = 
+    $$
+    $$
+    = \frac{f(\theta) + f(-\theta)}{2}I + \frac{f(\theta) - f(-\theta)}{2}A 
+    $$
+    $$
+    = \frac{f(\theta) + f(-\theta)}{2}I + \frac{f(\theta) - f(-\theta)}{2}\vec{n} \cdot \vec{\sigma} 
+    $$
     
 \end{framed}
 
