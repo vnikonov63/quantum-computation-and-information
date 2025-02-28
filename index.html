@@ -202,7 +202,7 @@ style="background-color: green!30"><strong>6</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>7</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: red!30"><strong>8</strong></span></td>
+style="background-color: yellow!30"><strong>8</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>9</strong></span></td>
 <td style="text-align: center;"><span
@@ -272,7 +272,7 @@ style="background-color: green!30"><strong>35</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>36</strong></span></td>
 <td style="text-align: center;"><span
-style="background-color: yellow!30"><strong>37</strong></span></td>
+style="background-color: green!30"><strong>37</strong></span></td>
 <td style="text-align: center;"><span
 style="background-color: green!30"><strong>38</strong></span></td>
 <td style="text-align: center;"><span
@@ -525,6 +525,58 @@ class="math inline">\(\sqrt{2}\)</span>.</p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.8</strong></p>
+<p>Let’s try and prove this using the principle of mathematical
+induction.<br />
+<br />
+<strong>Base case n = 1</strong> <span class="math display">\[\text{We
+need to show, that set } \{\ket{v_1} , \ket{v_2}\} \text{ is
+orthonormal.}\]</span> <span class="math display">\[\text{Expanding the
+definitions }
+        \ket{v_1} = \frac{\ket{w_1}}{\|\ket{w_1}\|_2}, \ket{v_2} =
+\frac{\ket{w_2} -
+\bra{v_1}\ket{w_{2}}\ket{v_1}}{\|\bra{v_1}\ket{w_{2}}\ket{v_1}\|_2}\]</span>
+<span class="math display">\[\text{Consider } \braket{v_1 | v_2} =
+\frac{\bra{w_1} (\ket{w_2} -
+\bra{v_1}\ket{w_{2}}\ket{v_1})}{\|\ket{w_1}\|_2\|\bra{v_1}\ket{w_{2}}\ket{v_1}\|_2}
+        \text{. Let&#39;s focus on the numerator}\]</span> <span
+class="math display">\[\braket{w_1 | w_2} -
+\bra{w_1}\bra{v_1}\ket{w_2}\ket{v_1} = \braket{w_1 | w_2} - \braket{w_1
+| v_1}\braket{v_1 | w_2} \text{, as } \braket{v_1 | w_2} \text{ is a
+scalar.}\]</span> <span class="math display">\[\braket{w_1 | v_1} =
+\frac{\braket{w_1 | w_1}}{\|\ket{w_1}\|_2} =
+\frac{\|\ket{w_1}\|_2^{2}}{\|\ket{w_1}\|_2} = \|\ket{w_1}\|_2 ,
+\braket{v_1 | w_2} = \frac{\braket{w_1 | w_2}}{\|\ket{w_1}\|_2}
+        \implies (1) \text{ is: }\]</span> <span
+class="math display">\[\braket{w_1 | w_2} -
+\|\ket{w_1}\|_2\frac{\braket{w_1 | w_2}}{\|\ket{w_1}\|_2} = \braket{w_1
+| w_2} - \braket{w_1 | w_2} = 0\]</span> <span
+class="math display">\[\text{Thus set } \{\ket{v_1} , \ket{v_2}\} \text{
+is orthonormal.}\]</span> <span class="math display">\[\text{Also }
+\textbf{TODO: ASK A QUESTION WHY THIS IS NORMALIZED}\]</span></p>
+<p><strong>Induction hypothesis n = k</strong> <span
+class="math display">\[\text{Assume the set } \{v_1, \dots, v_k\} \text{
+is orthonormal.}\]</span> <span class="math display">\[\text{This means
+} \braket{v_i | v_j } = 0 \text{ for } i \neq j \text{ and }
+\|\ket{v_i}\|_2 = 1, \forall i.\]</span> <strong>Induction step n =
+k</strong> <span class="math inline">\(\implies\)</span> <strong>n = k +
+1</strong> <span class="math display">\[\text{For any } 1 \leq i \leq k
++ 1 \text{ we can write out the dot product } \braket{v_i | v_{k+1}}
+=\]</span> <span class="math display">\[= \frac{\bra{v_i}(\ket{w_{k+1}}
+- \sum_{j=1}^{k}{\braket{v_j | w_{k+1}}}\ket{v_j})}{\|\ket{w_{k+1}} -
+\sum_{j=1}^{k}{\braket{v_j | w_{k+1}}}\ket{v_j}\|_2}.\]</span> <span
+class="math display">\[\text{Consider the numerator } \braket{v_i |
+w_{k+1}} - \sum_{j=1}^{k}{\braket{v_j | w_{k+1}}\braket{v_i | v_j}}
+\text{ as } \braket{v_j | w_{k+1}} \text{ is a scalar}\]</span> <span
+class="math display">\[\braket{v_i | w_{k+1}} - \braket{v_i |
+w_{k+1}}\braket{v_i | v_i} \text{ as the inner product } \braket{v_i |
+v_j } = 0 \text{ for } i \neq j\]</span> <span class="math display">\[=
+\braket{v_i | w_{k+1}} - \braket{v_i | w_{k+1}} = 0 \text{, as }
+\braket{v_i | v_i} = \|\ket{v_i}\|_2^{2} = 1 \text{, because } \ket{v_i}
+\text{ is normalized}.\]</span> <span class="math display">\[\text{Thus
+} \ket{v_{k+1}} \text{ is orthogonal to every } \ket{v_i} \text{ for
+every } 1 \leq i \leq k.\]</span></p>
+<p><span class="math display">\[\text{Also } \textbf{TODO: ASK A
+QUESTION WHY THIS IS NORMALIZED}\]</span></p>
 </div>
 <div class="framed">
 <p><strong>Exercise 2.9: (Pauli operators and the outer
@@ -1403,8 +1455,8 @@ vector}.\]</span></p>
 class="math display">\[= \sum_{i=1}^{n}\sum_{j=1}^{n}{B_{ji}A_{ij}}
 \text{, as } B_{ji} \text{ and } A_{ij} \text{ are elements of the
 matrix and thus commutative scalars}\]</span> <span
-class="math display">\[= \sum_{j=1}^{n}\sum_{i=1}^{n}{B_{ji}A_{ij}}
-\textbf{ !!TODO!! ASK A QUESTION}\]</span> <span
+class="math display">\[=
+\sum_{j=1}^{n}\sum_{i=1}^{n}{B_{ji}A_{ij}}\]</span> <span
 class="math display">\[= \sum_{j=1}^{n}(BA)_{jj} =
 \operatorname{tr}(BA)\]</span></p>
 </div>
