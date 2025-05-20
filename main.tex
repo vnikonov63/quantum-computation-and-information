@@ -2123,7 +2123,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \begin{center}
 \begin{tabular}{*{9}{c}}
 \toprule
-\notStarted{1} & \notStarted{2} & \notStarted{3} & \notStarted{4} & \notStarted{5} & \notStarted{6} & \notStarted{7} & \notStarted{8} & \notStarted{9} \\
+\notStarted{1} & \solved{2} & \solved{3} & \notStarted{4} & \notStarted{5} & \notStarted{6} & \notStarted{7} & \notStarted{8} & \notStarted{9} \\
 \notStarted{10} & \notStarted{11} & \notStarted{12} & \notStarted{13} & \notStarted{14} & \notStarted{15} & \notStarted{16} & \notStarted{17} & \notStarted{18} \\
 \notStarted{19} & \notStarted{20} & \notStarted{21} & \notStarted{22} & \notStarted{23} & \notStarted{24} & \notStarted{25} & \notStarted{26} & \notStarted{27} \\
 \notStarted{28} & \notStarted{29} & \notStarted{30} & \notStarted{31} & \notStarted{32} & \notStarted{33} & \notStarted{34} & \notStarted{35} & \notStarted{36} \\
@@ -2142,7 +2142,6 @@ A more detailed explanation of the definition you can find in "Introduction to T
     
     \medskip
     
-    
 \end{framed}
 
 
@@ -2152,7 +2151,35 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 4.2}
     
     \medskip
-    
+
+    We know, that 
+        $$
+            exp(iAx) = \sum_{n=0}^{\infty}{\frac{(iAx)^n}{n!}} \text{ from the matrix exponential definition.}
+        $$
+        $$
+            \text{Let's separately consider odd and even values of } n: 2k_1, 2k_2+1 \text{, where } k_1,k_2 \in \mathbb{Z}
+        $$
+        $$
+            \sum_{n=0}^{\infty}{\frac{(iAx)^n}{n!}}=\sum_{k_1=0}^{\infty}{\frac{(iAx)^{2k_1}}{(2k_1)!}} + \sum_{k_2=0}^{\infty}{\frac{(iAx)^{2k_2+1}}{(2k_2+1)!}}
+        $$
+        $$
+            \text{Consider } A^2 = I \implies A^3 = AI = A \implies A^4 = AA = I \implies A^n = 
+            \begin{cases}
+                I & n \text{ even} \\
+                A & n \text{ odd}
+            \end{cases}
+        $$
+        $$
+            \text{This could be used to simplify the above as } \sum_{k_1=0}^{\infty}{I\frac{(ix)^{2k_1}}{(2k_1)!}} + \sum_{k_2=0}^{\infty}{A\frac{(ix)^{2k_2+1}}{(2k_2+1)!}} = 
+        $$
+        $$
+            = I\sum_{k_1=0}^{\infty}{i^{2k_1}\frac{(x)^{2k_1}}{(2k_1)!}} + A\sum_{k_2=0}^{\infty}{i \cdot i^{2k_2}\frac{(x)^{2k_2+1}}{(2k_2+1)!}} = 
+            I\sum_{k_1=0}^{\infty}{(-1)^{k_1}\frac{(x)^{2k_1}}{(2k_1)!}} + Ai\sum_{k_2=0}^{\infty}{(-1)^{k_2}\frac{(x)^{2k_2+1}}{(2k_2+1)!}} = 
+        $$
+        $$
+            = \cos(x)I + i\sin(x)A \text{ from the definiton of the Maclaurin expansion.}
+        $$
+
     
 \end{framed}
 
@@ -2163,6 +2190,24 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 4.3}
     
     \medskip
+    Let's explicitly compute using formula $(4.6)$:
+    $$
+        R_z(\pi / 4) = e^{-iX\frac{\pi}{8}} = \cos(\frac{\pi}{8})I - \sin(\frac{\pi}{8})Z = 
+        \begin{bmatrix}
+            e^{-i\frac{\pi}{8}} & 0                   \\
+            0                   &  e^{i\frac{\pi}{8}}
+        \end{bmatrix}
+        = e^{-i\frac{\pi}{8}}
+        \begin{bmatrix}
+            1 & 0                   \\
+            0                   &  e^{i\frac{\pi}{4}}
+        \end{bmatrix}
+        = e^{-i\frac{\pi}{8}}T
+    $$
+    $$
+        \text{As we can factor out the common phase } e^{-i\frac{\pi}{8}}.
+    $$
+
     
     
 \end{framed}
