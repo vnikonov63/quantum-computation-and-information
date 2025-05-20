@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1747777689.88519 "/Users/vnikonov/quantum-computation-and-information/main.tex" "main.pdf" "main" 1747777690.88819 0
-  "/Users/vnikonov/quantum-computation-and-information/main.tex" 1747777689.70152 82232 ab638ed2d52579688bc3cea10b3b81b3 ""
+["pdflatex"] 1747778799.16965 "/Users/vnikonov/quantum-computation-and-information/main.tex" "main.pdf" "main" 1747778800.19898 0
+  "/Users/vnikonov/quantum-computation-and-information/main.tex" 1747778798.98335 86210 fb691f92be0880844c2c77661615e069 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -214,9 +214,9 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740191979 8221431 5c1f7243e63d08216b0b89e39eddace1 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "images/3.4TM.jpg" 1740044136.40319 39320 8d083a4d51bca46bf9a852bb4f58e578 ""
-  "main.aux" 1747777690.80216 855 bb4de6a959eef434a9c555359aa57090 "pdflatex"
-  "main.out" 1747777690.4797 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1747777689.70152 82232 ab638ed2d52579688bc3cea10b3b81b3 ""
+  "main.aux" 1747778800.1127 855 bb4de6a959eef434a9c555359aa57090 "pdflatex"
+  "main.out" 1747778799.77999 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1747778798.98335 86210 fb691f92be0880844c2c77661615e069 ""
   (generated)
   "main.aux"
   "main.log"

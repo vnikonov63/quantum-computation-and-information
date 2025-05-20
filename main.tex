@@ -2123,8 +2123,8 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \begin{center}
 \begin{tabular}{*{9}{c}}
 \toprule
-\notStarted{1} & \solved{2} & \solved{3} & \notStarted{4} & \notStarted{5} & \notStarted{6} & \notStarted{7} & \notStarted{8} & \notStarted{9} \\
-\notStarted{10} & \notStarted{11} & \notStarted{12} & \notStarted{13} & \notStarted{14} & \notStarted{15} & \notStarted{16} & \notStarted{17} & \notStarted{18} \\
+\notStarted{1} & \solved{2} & \solved{3} & \notStarted{4} & \notStarted{5} & \notStarted{6} & \inProgress{7} & \notStarted{8} & \notStarted{9} \\
+\notStarted{10} & \notStarted{11} & \notStarted{12} & \solved{13} & \notStarted{14} & \notStarted{15} & \notStarted{16} & \notStarted{17} & \notStarted{18} \\
 \notStarted{19} & \notStarted{20} & \notStarted{21} & \notStarted{22} & \notStarted{23} & \notStarted{24} & \notStarted{25} & \notStarted{26} & \notStarted{27} \\
 \notStarted{28} & \notStarted{29} & \notStarted{30} & \notStarted{31} & \notStarted{32} & \notStarted{33} & \notStarted{34} & \notStarted{35} & \notStarted{36} \\
 \notStarted{37} & \notStarted{38} & \notStarted{39} & \notStarted{40} & \notStarted{41} & \notStarted{42} & \notStarted{43} & \notStarted{44} & \notStarted{45} \\
@@ -2252,6 +2252,42 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 4.7}
     
     \medskip
+    We can easily compute 
+    $$
+        XYX = 
+        \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & -i \\
+            i & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            i & 0 \\
+            0 & -i
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            0 & i \\
+            -i & 0
+        \end{bmatrix}
+        = -1 
+        \begin{bmatrix}
+            0 & -i \\
+            i & 0
+        \end{bmatrix}
+        = -Y
+    $$
     
     
 \end{framed}
@@ -2318,7 +2354,123 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 4.13}
     
     \medskip
-    
+    We can explicitly compute the given products.
+    \begin{enumerate}
+        \item 
+            $$
+                HXH = 
+                \frac{1}{\sqrt{2}}
+                \frac{1}{\sqrt{2}}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    0 & 1 \\
+                    1 & 0
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    -1 & 1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    2 & 0 \\
+                    0 & -2
+                \end{bmatrix}
+                = 
+                \begin{bmatrix}
+                    1 & 0 \\
+                    0 & -1
+                \end{bmatrix}
+                = Z
+            $$
+        \item 
+            $$
+                HYH = 
+                \frac{1}{\sqrt{2}}
+                \frac{1}{\sqrt{2}}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    0 & i \\
+                    i & 0
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    i & i \\
+                    -i & i
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    2i & 0 \\
+                    0 & -2i
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    i & 0 \\
+                    0 & -i
+                \end{bmatrix}
+                = -Y
+            $$
+        \item  
+            $$
+                HZH = 
+                \frac{1}{\sqrt{2}}
+                \frac{1}{\sqrt{2}}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 0 \\
+                    0 & -1   
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    1 & -1 \\
+                    1 & 1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                \end{bmatrix}
+                = \frac{1}{2}
+                \begin{bmatrix}
+                    0 & 2 \\
+                    2 & 0
+                \end{bmatrix}
+                = 
+                \begin{bmatrix}
+                    0 & 1 \\
+                    1 & 0
+                \end{bmatrix}
+                = X
+            $$
+    \end{enumerate}
     
 \end{framed}
 
