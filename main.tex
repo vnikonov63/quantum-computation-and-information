@@ -2125,7 +2125,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \begin{tabular}{*{9}{c}}
 \toprule
 \notStarted{1} & \solved{2} & \solved{3} & \notStarted{4} & \solved{5} & \notStarted{6} & \inProgress{7} & \notStarted{8} & \notStarted{9} \\
-\notStarted{10} & \notStarted{11} & \notStarted{12} & \solved{13} & \notStarted{14} & \notStarted{15} & \solved{16} & \notStarted{17} & \notStarted{18} \\
+\notStarted{10} & \notStarted{11} & \notStarted{12} & \solved{13} & \notStarted{14} & \notStarted{15} & \solved{16} & \notStarted{17} & \inProgress{18} \\
 \notStarted{19} & \notStarted{20} & \notStarted{21} & \notStarted{22} & \notStarted{23} & \notStarted{24} & \notStarted{25} & \notStarted{26} & \notStarted{27} \\
 \notStarted{28} & \notStarted{29} & \notStarted{30} & \notStarted{31} & \notStarted{32} & \notStarted{33} & \notStarted{34} & \notStarted{35} & \notStarted{36} \\
 \notStarted{37} & \notStarted{38} & \notStarted{39} & \notStarted{40} & \notStarted{41} & \notStarted{42} & \notStarted{43} & \notStarted{44} & \notStarted{45} \\
@@ -2256,13 +2256,17 @@ A more detailed explanation of the definition you can find in "Introduction to T
     $$
         = I + n_xn_y\{\sigma_x,\sigma_y\} + n_xn_z\{\sigma_x,\sigma_z\} + n_yn_z\{\sigma_y,\sigma_z\} = I
     $$
+    We can use (4.7) as $(\hat{n} \cdot \vec{v})^2 = I$ So:
+    $$
+        R_{\hat{n}}(\theta) \equiv \exp(-i\theta \hat{n} \cdot \vec{\sigma} / 2) = \cos(-\frac{\theta}{2})I + i\sin(-\frac{\theta}{2})(\hat{n} \cdot \vec{\sigma}) = \cos(\frac{\theta}{2})I - i\sin(\frac{\theta}{2})(n_xX + b_yY + n_zZ)
+    $$
 \end{framed}
 
 
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 4.6}
+    \noindent \textbf{Exercise 4.6 (Bloch sphere interpretation of rotations)}
     
     \medskip
     
@@ -2342,7 +2346,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 4.10}
+    \noindent \textbf{Exercise 4.10 ($X-Y$ decomposition of rotations)}
     
     \medskip
     
@@ -2375,7 +2379,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 4.13}
+    \noindent \textbf{Exercise 4.13 (Circuit identities)}
     
     \medskip
     We can explicitly compute the given products.
@@ -2513,7 +2517,7 @@ A more detailed explanation of the definition you can find in "Introduction to T
 \bigskip
 
 \begin{framed}
-    \noindent \textbf{Exercise 4.15}
+    \noindent \textbf{Exercise 4.15 (Composition of single qubit operations)}
     
     \medskip
     
@@ -2609,7 +2613,12 @@ A more detailed explanation of the definition you can find in "Introduction to T
     \noindent \textbf{Exercise 4.18}
     
     \medskip
-    
+    $$
+        \Qcircuit @C=1em @R=1em {
+            & \ctrl{1} & \qw & & & \gate{Z} & \qw \\
+            & \gate{Z} & \qw & \push{\rule{.3em}{0em}=\rule{.3em}{0em}} & & \ctrl{-1} & \qw
+        }
+    $$
     
 \end{framed}
 
@@ -2976,7 +2985,45 @@ A more detailed explanation of the definition you can find in "Introduction to T
     
 \end{framed}
 
+\begin{framed}
+    \noindent \textbf{End of Chapter Exercise 4.3: (Alternate universality construction)}
+
+    \medskip
+    \begin{enumerate}
+        \item 
+            $$
+                H \equiv i\ln(U) \implies 
+            $$
+        \item B
+        \item C
+        \item D
+        \item E
+        \item F
+    \end{enumerate}
+\end{framed}
+
 \subsection*{Chapter 5: The quantum Fourier transform and its applications}
+
+\begin{framed}
+    \noindent \textbf{Exercise 5.1}
+    
+    \medskip
+    
+    
+\end{framed}
+
+\begin{framed}
+    \noindent \textbf{Exercise 5.2}
+    
+    \medskip
+    Consider:
+
+    $$
+        \ket{j} \rightarrow \frac{1}{\sqrt{N}}\sum_{k - 0}^{N-1}{e^{2\pi ijk / N}}\ket{k}
+    $$
+    
+    
+\end{framed}
 \subsection*{Chapter 6: Quantum search algorithms}
 \subsection*{Chapter 7: Quantum computers: physical realization}
 \subsection*{Chapter 8: Quantum noise and quantum operations}
